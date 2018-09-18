@@ -1,0 +1,30 @@
+{
+  "name": "soilexplorer",
+  "version": "1.0.0",
+  "description": "A senior project for Jacob Wilks and Nathan Larsen",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "*",
+    "mongoose": "*",
+    "bcryptjs": "*",
+    "cors": "*",
+    "jsonwebtoken": "*",
+    "body-parser": "*",
+    "passport": "*",
+    "passport-jwt": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobwilks/soilexplorer.git"
+  },
+  "author": "Jacob Wilks & Nathan Larsen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacobwilks/soilexplorer/issues"
+  },
+  "homepage": "https://github.com/jacobwilks/soilexplorer#readme"
+}
