@@ -1,5 +1,20 @@
-<ul>
-<li [routerLinkActive] = "['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink] = "['/']">Home</a></li>
-<li [routerLinkActive] = "['active']" [routerLinkActiveOptions] = "{exact:true}" ><a [routerLink] = "['/register']">Register</a></li>
-<li [routerLinkActive] = "['active']" [routerLinkActiveOptions] = "{exact:true}" ><a [routerLink] = "['/login']">Login</a></li>
-</ul>
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand><a class="navbar-brand" href="#">Soil Explorer</a></mdb-navbar-brand>
+
+    <!-- Collapsible content -->
+    <links>
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active" [routerLinkActive] = "['active']" [routerLinkActiveOptions] = "{exact:true}"><a class="nav-link waves-light" mdbWavesEffect [routerLink] = "['/']">Home</a></li>
+            <li class="nav-item active" [routerLinkActive] = "['active']" [routerLinkActiveOptions] = "{exact:true}" ><a class="nav-link waves-light" mdbWavesEffect [routerLink] = "['/register']">Register</a></li>
+            <li class="nav-item active" [routerLinkActive] = "['active']" [routerLinkActiveOptions] = "{exact:true}" ><a class="nav-link waves-light" mdbWavesEffect [routerLink] = "['/login']">Login</a></li>
+        </ul>
+        <!-- Links -->
+    </links>
+    <!-- Collapsible content -->
+    
+</mdb-navbar>
+<!--/.Navbar-->
