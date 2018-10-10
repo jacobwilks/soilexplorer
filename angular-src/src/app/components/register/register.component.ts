@@ -43,7 +43,7 @@ export class RegisterComponent implements OnInit {
         // Time after which the flash disappears defaults to 2000ms
         timeout: 2000,
         // Type of flash message, it defaults to info and success, warning, danger types can also be used
-        type: 'info'
+        type: 'danger'
       });
       return false;
     }
@@ -58,7 +58,7 @@ export class RegisterComponent implements OnInit {
         // Time after which the flash disappears defaults to 2000ms
         timeout: 2000,
         // Type of flash message, it defaults to info and success, warning, danger types can also be used
-        type: 'info'
+        type: 'danger'
       });
       return false;
     }

@@ -11,6 +11,7 @@
             <li class="nav-item" [routerLinkActive] = "['active']" [routerLinkActiveOptions] = "{exact:true}"><a class="nav-link waves-light" mdbWavesEffect [routerLink] = "['/']">Home</a></li>
             <li class="nav-item" [routerLinkActive] = "['active']" [routerLinkActiveOptions] = "{exact:true}" ><a class="nav-link waves-light" mdbWavesEffect [routerLink] = "['/register']">Register</a></li>
             <li class="nav-item" [routerLinkActive] = "['active']" [routerLinkActiveOptions] = "{exact:true}" ><a class="nav-link waves-light" mdbWavesEffect [routerLink] = "['/login']">Login</a></li>
+            <li class="nav-item"><a class="nav-link waves-light" mdbWavesEffect (click)="onLogoutClick()" href="#">Logout</a></li>
         </ul>
         <!-- Links -->
     </links>
