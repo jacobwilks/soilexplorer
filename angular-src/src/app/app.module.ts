@@ -12,7 +12,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
-
+import { ValidateService } from './services/validate.service';
+import { NgFlashMessagesModule } from 'ng-flash-messages';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -37,9 +38,12 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    NgFlashMessagesModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    ValidateService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
