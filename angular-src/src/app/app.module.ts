@@ -15,13 +15,21 @@ import { AuthService } from './services/auth.service';
 import { ValidateService } from './services/validate.service';
 
 import { NgFlashMessagesModule } from 'ng-flash-messages';
+import { JwtHelperService } from '@auth0/angular-jwt';
+import { JwtModule } from '@auth0/angular-jwt';
+import { HttpClientModule } from '@angular/common/http';
+import { AuthGuard } from './guards/auth.guard';
+
+export function tokenGetter() {
+  return localStorage.getItem('access_token');
+}
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'dashboard', component: DashboardComponent},
-  {path: 'profile', component: ProfileComponent}
+  {path: 'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
+  {path: 'profile', component: ProfileComponent, canActivate:[AuthGuard]}
 ]
 
 @NgModule({
@@ -40,11 +48,21 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes),
     MDBBootstrapModule.forRoot(),
-    NgFlashMessagesModule.forRoot()
+    NgFlashMessagesModule.forRoot(),
+    HttpClientModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        whitelistedDomains: ['localhost:3000'],
+        blacklistedRoutes: ['localhost:3000/auth/']
+      }
+    })
   ],
   providers: [
     ValidateService,
-    AuthService
+    AuthService,
+    JwtHelperService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
