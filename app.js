@@ -6,7 +6,35 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database')
 
- 
+//post gre
+const { Pool, Client } = require('pg')
+const pool = new Pool({
+    user: 'jacobwilks',
+    host: 'localhost',
+    database: 'movedb',
+    password: 'test',
+    port: 5432,
+  })
+  
+  pool.query('SELECT NOW()', (err, res) => {
+    console.log(err, res)
+    pool.end()
+  })
+  
+  const client = new Client({
+    user: 'jacobwilks',
+    host: 'localhost',
+    database: 'movedb',
+    password: 'test',
+    port: 5432,
+  })
+  client.connect()
+  
+  client.query('SELECT NOW()', (err, res) => {
+    console.log(err, res)
+    client.end()
+  })
+  
 // Connect to Database
 mongoose.connect(config.database);
 
