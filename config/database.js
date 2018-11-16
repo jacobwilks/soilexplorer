@@ -1,4 +1,4 @@
 module.exports = {
-    database: 'mongodb://localhost:27017/soilexplorer',
+    database: 'mongodb://admin:letmein123@ds163226.mlab.com:63226/soilexplorer',
     secret: "yoursecret"
 }
