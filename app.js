@@ -7,33 +7,33 @@ const mongoose = require('mongoose');
 const config = require('./config/database')
 
 //post gre
-const { Pool, Client } = require('pg')
-const pool = new Pool({
-    user: 'jacobwilks',
-    host: 'localhost',
-    database: 'movedb',
-    password: 'test',
-    port: 5432,
-  })
+// const { Pool, Client } = require('pg')
+// const pool = new Pool({
+//     user: 'jacobwilks',
+//     host: 'localhost',
+//     database: 'movedb',
+//     password: 'test',
+//     port: 5432,
+//   })
   
-  pool.query('SELECT NOW()', (err, res) => {
-    console.log(err, res)
-    pool.end()
-  })
+//   pool.query('SELECT NOW()', (err, res) => {
+//     console.log(err, res)
+//     pool.end()
+//   })
   
-  const client = new Client({
-    user: 'jacobwilks',
-    host: 'localhost',
-    database: 'movedb',
-    password: 'test',
-    port: 5432,
-  })
-  client.connect()
+//   const client = new Client({
+//     user: 'jacobwilks',
+//     host: 'localhost',
+//     database: 'movedb',
+//     password: 'test',
+//     port: 5432,
+//   })
+//   client.connect()
   
-  client.query('SELECT NOW()', (err, res) => {
-    console.log(err, res)
-    client.end()
-  })
+//   client.query('SELECT NOW()', (err, res) => {
+//     console.log(err, res)
+//     client.end()
+//   })
   
 // Connect to Database
 mongoose.connect(config.database);
@@ -52,7 +52,7 @@ const app = express();
 const users = require('./routes/users');
 
 // Port Number
-const port = 3000;
+const port = process.env.port || 8080;
 
 app.use(cors());
 
