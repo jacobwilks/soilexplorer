@@ -59,7 +59,8 @@ var server_host = process.env.YOUR_HOST || '0.0.0.0';
 app.use(cors());
 
 // Set static folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'Public')));
+
 
 // Creating body parser
 app.use(bodyParser.json());
