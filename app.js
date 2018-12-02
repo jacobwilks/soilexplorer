@@ -6,34 +6,44 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database')
 
+var connectionString = "postgres://pchprvkbglwijx:8806251efc0964cd8fb3efeb3a31dc1e91c29d877446413b69f6834d3a9c7878@ec2-23-23-153-145.compute-1.amazonaws.com:5432/d1am7kmofqfr69"
+ 
+pg.connect(connectionString, function(err, client, done) {
+   client.query('SELECT * FROM your_table', function(err, result) {
+      done();
+      if(err) return console.error(err);
+      console.log(result.rows);
+   });
+});
+
 //post gre
-const { Pool, Client } = require('pg')
-const pool = new Pool({
-    user: 'pchprvkbglwijx',
-    host: 'ec2-23-23-153-145.compute-1.amazonaws.com',
-    database: 'd1am7kmofqfr69',
-    password: '8806251efc0964cd8fb3efeb3a31dc1e91c29d877446413b69f6834d3a9c7878',
-    port: 5432,
-  })
+// const { Pool, Client } = require('pg')
+// const pool = new Pool({
+//     user: 'pchprvkbglwijx',
+//     host: 'ec2-23-23-153-145.compute-1.amazonaws.com',
+//     database: 'd1am7kmofqfr69',
+//     password: '8806251efc0964cd8fb3efeb3a31dc1e91c29d877446413b69f6834d3a9c7878',
+//     port: 5432,
+//   })
   
-  pool.query('SELECT NOW()', (err, res) => {
-    console.log(err, res)
-    pool.end()
-  })
+//   pool.query('SELECT NOW()', (err, res) => {
+//     console.log(err, res)
+//     pool.end()
+//   })
   
-  const client = new Client({
-    user: 'pchprvkbglwijx',
-    host: 'ec2-23-23-153-145.compute-1.amazonaws.com',
-    database: 'd1am7kmofqfr69',
-    password: '8806251efc0964cd8fb3efeb3a31dc1e91c29d877446413b69f6834d3a9c7878',
-    port: 5432,
-  })
-  client.connect()
+//   const client = new Client({
+//     user: 'pchprvkbglwijx',
+//     host: 'ec2-23-23-153-145.compute-1.amazonaws.com',
+//     database: 'd1am7kmofqfr69',
+//     password: '8806251efc0964cd8fb3efeb3a31dc1e91c29d877446413b69f6834d3a9c7878',
+//     port: 5432,
+//   })
+//   client.connect()
   
-  client.query('SELECT NOW()', (err, res) => {
-    console.log(err, res)
-    client.end()
-  })
+//   client.query('SELECT NOW()', (err, res) => {
+//     console.log(err, res)
+//     client.end()
+//   })
   
 // Connect to Database
 mongoose.connect(config.database);
