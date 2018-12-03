@@ -9,7 +9,7 @@ const config = require('./config/database')
 var connectionString = "postgres://celgniofihjtjb:12ed9f62a38cc6deebccaf63b808f0998dd0bd4e5abcf1ad976d7d4860b81b74@ec2-54-197-249-140.compute-1.amazonaws.com:5432/dhmcr2eu1cjkm"
  
 pg.connect(connectionString, function(err, client, done) {
-   client.query('SELECT * FROM your_table', function(err, result) {
+   client.query('SELECT * FROM legend', function(err, result) {
       done();
       if(err) return console.error(err);
       console.log(result.rows);
