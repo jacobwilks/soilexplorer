@@ -16,11 +16,6 @@ const pool = new Pool({
     port: 5432,
   })
   
-  pool.query('SELECT NOW();', (err, res) => {
-    console.log(err, res)
-    pool.end()
-  })
-  
   const client = new Client({
     user: 'celgniofihjtjb',
     host: 'ec2-54-197-249-140.compute-1.amazonaws.com',
@@ -29,11 +24,6 @@ const pool = new Pool({
     port: 5432,
   })
   client.connect()
-  
-  client.query('SELECT NOW();', (err, res) => {
-    console.log(err, res)
-    client.end()
-  })
   
 // Connect to Database
 mongoose.connect(config.database);
