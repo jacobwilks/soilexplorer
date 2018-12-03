@@ -6,7 +6,7 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database')
 
-var connectionString = "postgres://pchprvkbglwijx:8806251efc0964cd8fb3efeb3a31dc1e91c29d877446413b69f6834d3a9c7878@ec2-23-23-153-145.compute-1.amazonaws.com:5432/d1am7kmofqfr69"
+var connectionString = "postgres://celgniofihjtjb:12ed9f62a38cc6deebccaf63b808f0998dd0bd4e5abcf1ad976d7d4860b81b74@ec2-54-197-249-140.compute-1.amazonaws.com:5432/dhmcr2eu1cjkm"
  
 pg.connect(connectionString, function(err, client, done) {
    client.query('SELECT * FROM your_table', function(err, result) {
