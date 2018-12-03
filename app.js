@@ -16,7 +16,7 @@ const pool = new Pool({
     port: 5432,
   })
   
-  pool.query('SELECT NOW()', (err, res) => {
+  pool.query('SELECT NOW();', (err, res) => {
     console.log(err, res)
     pool.end()
   })
@@ -30,7 +30,7 @@ const pool = new Pool({
   })
   client.connect()
   
-  client.query('SELECT NOW()', (err, res) => {
+  client.query('SELECT NOW();', (err, res) => {
     console.log(err, res)
     client.end()
   })
