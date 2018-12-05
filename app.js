@@ -117,6 +117,6 @@ sequelize
   .then(users => {
   })
 
-models.findOne().then(function(legend){
+  legend.findAll().then(legend => {
     console.log(legend)
-})
+  })
