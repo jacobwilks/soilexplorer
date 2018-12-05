@@ -5,6 +5,7 @@ const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database')
+const models = require('./models');
 
 //post gre
 const { Pool, Client } = require('pg')
@@ -115,3 +116,7 @@ sequelize
   sequelize.query("SELECT areasymbol, saverest FROM sacatalog", { type: sequelize.QueryTypes.SELECT})
   .then(users => {
   })
+
+models.legend.findOne().then(function(legend){
+    console.log(legend)
+})
