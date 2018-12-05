@@ -110,7 +110,7 @@ sequelize
     console.log('Connection has been established successfully.'); 
   })
   .catch(err => {
-    console.error('Unabhatabase:', err);
+    console.error('Unasdabhatabase:', err);
   });
 
   sequelize.query("SELECT areasymbol, saverest FROM sacatalog", { type: sequelize.QueryTypes.SELECT})
