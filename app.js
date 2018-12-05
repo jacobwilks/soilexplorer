@@ -12,7 +12,6 @@ const sequelize = new Sequelize('dhmcr2eu1cjkm', 'celgniofihjtjb','12ed9f62a38cc
     host: 'ec2-54-197-249-140.compute-1.amazonaws.com',
     dialect: 'postgres',
     operatorsAliases: false,
-    typescript: true,
 
     pool: {
         max: 5,
@@ -25,8 +24,8 @@ const sequelize = new Sequelize('dhmcr2eu1cjkm', 'celgniofihjtjb','12ed9f62a38cc
         ssl: true
     }
 });
-import * as dbTables from './models/';
-const tables = dbTables.getModels(sequelize);
+const models = sequelize.import(__dirname + "soilexplorer/models");
+//post gre
 const { Pool, Client } = require('pg')
 const pool = new Pool({
     user: 'celgniofihjtjb',
