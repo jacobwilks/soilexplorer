@@ -109,4 +109,5 @@ sequelize
   });
 
   sequelize.query("SELECT areasymbol, saverest FROM sacatalog", { type: sequelize.QueryTypes.SELECT})
-  .then(console.log('hello'));
+  .then(users => {
+  })
