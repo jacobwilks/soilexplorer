@@ -107,3 +107,7 @@ sequelize
   .catch(err => {
     console.error('Unabhatabase:', err);
   });
+
+  sequelize.query("SELECT * FROM `chfrags`", { type: sequelize.QueryTypes.SELECT})
+  .then(users => {
+  })
