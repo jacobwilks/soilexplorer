@@ -24,7 +24,7 @@ const pool = new Pool({
     port: 5432,
   })
   client.connect()
-  
+
 // Connect to Database
 mongoose.connect(config.database);
 
@@ -98,6 +98,10 @@ const sequelize = new Sequelize('dhmcr2eu1cjkm', 'celgniofihjtjb','12ed9f62a38cc
         acquire: 30000,
         idle: 10000
     },
+
+    dialectOptions: {
+        ssl: true
+    }
 });
 sequelize
   .authenticate()
