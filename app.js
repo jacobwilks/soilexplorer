@@ -30,7 +30,7 @@ mongoose.connect(config.database);
 
 // Once Connected to DB
 mongoose.connection.on('connected', () => {
-    console.log('connected to db, YAY! ' + config.database);
+    console.log('connected ssto db, YAY! ' + config.database);
 });
 
 // If an error connecting to db
