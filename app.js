@@ -12,6 +12,7 @@ const sequelize = new Sequelize('dhmcr2eu1cjkm', 'celgniofihjtjb','12ed9f62a38cc
     host: 'ec2-54-197-249-140.compute-1.amazonaws.com',
     dialect: 'postgres',
     operatorsAliases: false,
+    typescript: true,
 
     pool: {
         max: 5,
