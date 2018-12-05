@@ -108,6 +108,6 @@ sequelize
     console.error('Unabhatabase:', err);
   });
 
-  sequelize.query("SELECT * FROM `chfrags`", { type: sequelize.QueryTypes.SELECT})
+  sequelize.query("SELECT areasymbol, saverest FROM sacatalog", { type: sequelize.QueryTypes.SELECT})
   .then(users => {
   })
