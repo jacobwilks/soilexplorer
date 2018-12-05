@@ -5,7 +5,7 @@ const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database')
-const models = require('/models');
+const models = require('models');
 
 //post gre
 const { Pool, Client } = require('pg')
