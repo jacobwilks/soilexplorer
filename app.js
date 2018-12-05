@@ -24,8 +24,8 @@ const sequelize = new Sequelize('dhmcr2eu1cjkm', 'celgniofihjtjb','12ed9f62a38cc
         ssl: true
     }
 });
-const models = sequelize.import("../models/*.js");
-//post gre
+import * as dbTables from './models/';
+const tables = dbTables.getModels(sequelize);
 const { Pool, Client } = require('pg')
 const pool = new Pool({
     user: 'celgniofihjtjb',
