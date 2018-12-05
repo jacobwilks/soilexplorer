@@ -99,3 +99,11 @@ const sequelize = new Sequelize('dhmcr2eu1cjkm', 'celgniofihjtjb','12ed9f62a38cc
         idle: 10000
     },
 });
+sequelize
+  .authenticate()
+  .then(() => {
+    console.log('Connection has been established successfully.'); 
+  })
+  .catch(err => {
+    console.error('Unabhatabase:', err);
+  });
