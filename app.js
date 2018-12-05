@@ -5,7 +5,7 @@ const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database')
-//const models = require('./models/legend');
+const models = require('./models/legend.js');
 //Sequelize
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize('dhmcr2eu1cjkm', 'celgniofihjtjb','12ed9f62a38cc6deebccaf63b808f0998dd0bd4e5abcf1ad976d7d4860b81b74', {
@@ -24,7 +24,6 @@ const sequelize = new Sequelize('dhmcr2eu1cjkm', 'celgniofihjtjb','12ed9f62a38cc
         ssl: true
     }
 });
-const models = require("/soilexplorer/models");
 //post gre
 const { Pool, Client } = require('pg')
 const pool = new Pool({
