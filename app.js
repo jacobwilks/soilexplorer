@@ -24,7 +24,7 @@ const sequelize = new Sequelize('dhmcr2eu1cjkm', 'celgniofihjtjb','12ed9f62a38cc
         ssl: true
     }
 });
-const models = sequelize.import(__soilexplorer + "/models");
+const Project = sequelize.import(__dirname + "/models");
 //post gre
 const { Pool, Client } = require('pg')
 const pool = new Pool({
