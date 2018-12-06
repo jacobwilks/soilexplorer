@@ -13,9 +13,10 @@ if (!global.hasOwnProperty('db')) {
       })
     } else {
       // the application is executed on the local machine ... use mysql
-      sequelize = new Sequelize('example-app-db', 'root', null)
-    }
-  
+      sequelize = new Sequelize('dhmcr2eu1cjkm', 'nathanwlarsen', 'Eliz@b3th2', {
+        dialect: 'postgres'
+      });
+      
     global.db = {
       Sequelize: Sequelize,
       sequelize: sequelize,
@@ -27,6 +28,7 @@ if (!global.hasOwnProperty('db')) {
       Associations can be defined here. E.g. like this:
       global.db.User.hasMany(global.db.SomethingElse)
     */
-  }
+  } 
   
   module.exports = global.db
+}
