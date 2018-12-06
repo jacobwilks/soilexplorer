@@ -25,21 +25,41 @@ const sequelize = new Sequelize('dhmcr2eu1cjkm', 'celgniofihjtjb','12ed9f62a38cc
         ssl: true
     }
 });
-//post gre
+
+// postgre heroku
+// const { Pool, Client } = require('pg')
+// const pool = new Pool({
+//     user: 'celgniofihjtjb',
+//     host: 'ec2-54-197-249-140.compute-1.amazonaws.com',
+//     database: 'dhmcr2eu1cjkm',
+//     password: '12ed9f62a38cc6deebccaf63b808f0998dd0bd4e5abcf1ad976d7d4860b81b74',
+//     port: 5432,
+//   })
+  
+//   const client = new Client({
+//     user: 'celgniofihjtjb',
+//     host: 'ec2-54-197-249-140.compute-1.amazonaws.com',
+//     database: 'dhmcr2eu1cjkm',
+//     password: '12ed9f62a38cc6deebccaf63b808f0998dd0bd4e5abcf1ad976d7d4860b81b74',
+//     port: 5432,
+//   })
+//   client.connect()
+
+// postgre local
 const { Pool, Client } = require('pg')
 const pool = new Pool({
-    user: 'celgniofihjtjb',
-    host: 'ec2-54-197-249-140.compute-1.amazonaws.com',
+    user: 'root',
+    host: 'localhost',
     database: 'dhmcr2eu1cjkm',
-    password: '12ed9f62a38cc6deebccaf63b808f0998dd0bd4e5abcf1ad976d7d4860b81b74',
+    password: 'root',
     port: 5432,
   })
   
   const client = new Client({
-    user: 'celgniofihjtjb',
-    host: 'ec2-54-197-249-140.compute-1.amazonaws.com',
+    user: 'root',
+    host: 'localhost',
     database: 'dhmcr2eu1cjkm',
-    password: '12ed9f62a38cc6deebccaf63b808f0998dd0bd4e5abcf1ad976d7d4860b81b74',
+    password: 'root',
     port: 5432,
   })
   client.connect()
@@ -60,10 +80,12 @@ mongoose.connection.on('error', (err) => {
 const app = express();
 const users = require('./routes/users');
 
-// Port Number
-// const port = process.env.port || 8080
-var server_port = process.env.YOUR_PORT || process.env.PORT || 8080;
-var server_host = process.env.YOUR_HOST || '0.0.0.0';
+// Port Number For Local
+const port = process.env.port || 8080
+
+// Port Number for Heroku
+//var server_port = process.env.YOUR_PORT || process.env.PORT || 8080;
+//var server_host = process.env.YOUR_HOST || '0.0.0.0';
 
 app.use(cors());
 
@@ -96,13 +118,15 @@ app.get('*', function (req, res) {
 //     res.sendFile(path.join(__dirname, 'public/index.html'));
 // })
 
-
-app.listen(server_port, server_host, function() {
-    console.log('Listening on port %d', server_port);
-});
-// app.listen(port,() => {
-//     console.log('server started on port ' + port);
+// For Heroku
+// app.listen(server_port, server_host, function() {
+//     console.log('Listening on port %d', server_port);
 // });
+
+// For Local
+app.listen(port, 'localhost', function() {
+    console.log('Listening on port %d', port);
+});
 
 sequelize
   .authenticate()
@@ -115,7 +139,14 @@ sequelize
 // users is the entire array of results
 // users[0] gives us the first entry
 // make a loop to add them to a table as it reads??????
+<<<<<<< HEAD
   sequelize.query(  "SELECT areasymbol AS Area_symbol, areaname AS Area_name, musym AS Map_unit_symbol, m.mukey AS MUKEY, cropname AS Crop, yldunits AS Units, nonirryield_r AS Non_irrigated, irryield_r AS Irrigated FROM legend AS l INNER JOIN mapunit AS m ON l.lkey = m.lkey AND areasymbol LIKE 'CA604' LEFT OUTER JOIN mucropyld AS y ON m.mukey = y.mukey;" , { type: sequelize.QueryTypes.SELECT})
   .then(users => {
 })
       //console.log(users[0])
+=======
+//   sequelize.query(  "SELECT areasymbol AS Area_symbol, areaname AS Area_name, musym AS Map_unit_symbol, m.mukey AS MUKEY, cropname AS Crop, yldunits AS Units, nonirryield_r AS Non_irrigated, irryield_r AS Irrigated FROM legend AS l INNER JOIN mapunit AS m ON l.lkey = m.lkey AND areasymbol LIKE 'CA604' LEFT OUTER JOIN mucropyld AS y ON m.mukey = y.mukey;" , { type: sequelize.QueryTypes.SELECT})
+//   .then(users => {
+//       console.log(users[0])
+//   })
+>>>>>>> 18585347ca91a2f521fc7b70bef7334f44bb3df1
