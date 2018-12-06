@@ -26,21 +26,40 @@ const sequelize = new Sequelize('dhmcr2eu1cjkm', 'celgniofihjtjb','12ed9f62a38cc
     }
 });
 
-//postgre
+// postgre heroku
+// const { Pool, Client } = require('pg')
+// const pool = new Pool({
+//     user: 'celgniofihjtjb',
+//     host: 'ec2-54-197-249-140.compute-1.amazonaws.com',
+//     database: 'dhmcr2eu1cjkm',
+//     password: '12ed9f62a38cc6deebccaf63b808f0998dd0bd4e5abcf1ad976d7d4860b81b74',
+//     port: 5432,
+//   })
+  
+//   const client = new Client({
+//     user: 'celgniofihjtjb',
+//     host: 'ec2-54-197-249-140.compute-1.amazonaws.com',
+//     database: 'dhmcr2eu1cjkm',
+//     password: '12ed9f62a38cc6deebccaf63b808f0998dd0bd4e5abcf1ad976d7d4860b81b74',
+//     port: 5432,
+//   })
+//   client.connect()
+
+// postgre local
 const { Pool, Client } = require('pg')
 const pool = new Pool({
-    user: 'celgniofihjtjb',
-    host: 'ec2-54-197-249-140.compute-1.amazonaws.com',
+    user: 'root',
+    host: 'localhost',
     database: 'dhmcr2eu1cjkm',
-    password: '12ed9f62a38cc6deebccaf63b808f0998dd0bd4e5abcf1ad976d7d4860b81b74',
+    password: 'root',
     port: 5432,
   })
   
   const client = new Client({
-    user: 'celgniofihjtjb',
-    host: 'ec2-54-197-249-140.compute-1.amazonaws.com',
+    user: 'root',
+    host: 'localhost',
     database: 'dhmcr2eu1cjkm',
-    password: '12ed9f62a38cc6deebccaf63b808f0998dd0bd4e5abcf1ad976d7d4860b81b74',
+    password: 'root',
     port: 5432,
   })
   client.connect()
