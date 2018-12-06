@@ -110,13 +110,16 @@ app.get('/', (req, res) => {
 
 });
 
-app.get('*', function (req, res) {
-    const index = path.join(__dirname, 'build', 'index.html');
-    res.sendFile(index);
+// For Heroku
+// app.get('*', function (req, res) {
+//     const index = path.join(__dirname, 'build', 'index.html');
+//     res.sendFile(index);
+//   });
+
+// For Local
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'));
   });
-// app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'public/index.html'));
-// })
 
 // For Heroku
 // app.listen(server_port, server_host, function() {
