@@ -113,8 +113,8 @@ sequelize
     console.error('Unasdabhatabase:', err);
   });
 
-  sequelize.query("SELECT areasymbol, saverest FROM sacatalog as RESULT;", { type: sequelize.QueryTypes.SELECT})
+  sequelize.query("SELECT areasymbol, saverest FROM sacatalog;", { type: sequelize.QueryTypes.SELECT})
   .then(users => {
-      console.log(RESULT)
+      console.log(users)
   })
 
