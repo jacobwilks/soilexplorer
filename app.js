@@ -128,6 +128,4 @@ sequelize
     document.body.appendChild(table);
     console.log(table);
 })
-
       //console.log(users[0])
-  })
