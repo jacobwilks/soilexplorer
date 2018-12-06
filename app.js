@@ -5,7 +5,7 @@ const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database')
-//const models = require('./models');
+const models = require('./models');
 
 //Sequelize
 const Sequelize = require('sequelize');
@@ -110,10 +110,10 @@ sequelize
     console.log('Connection has been established successfully.'); 
   })
   .catch(err => {
-    console.error('Unabhatabase:', err);
+    console.error('Unasdabhatabase:', err);
   });
 
-  sequelize.query("SELECT areasymbol, saverest FROM sacatalog", { type: sequelize.QueryTypes.SELECT})
+  sequelize.query("SELECT areasymbol, saverest FROM sacatalog;", { type: sequelize.QueryTypes.SELECT})
   .then(users => {
   })
 
