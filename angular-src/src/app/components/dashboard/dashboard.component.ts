@@ -16,7 +16,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class DashboardComponent implements OnInit {
 
-  pdfSrc: string = "'https://github.com/jacobwilks/soilexplorer/blob/master/angular-src/src/assets/SSURGO_Metadata_-_Relationships.pdf'";
+  pdfSrc: string = '../../SSURGO_Metadata_-_Relationships.pdf';
 
   constructor() { }
 
