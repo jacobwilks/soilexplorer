@@ -4,14 +4,5 @@
     <li class="list-group-item">Username: {{user.username}}</li>
     <li class="list-group-item">Email: {{user.email}}</li>
   </ul>
-  let table = document.createElement('table');
-  for (let row of users) {
-      table.insertRow();
-      for (let cell of row) {
-          let newCell = table.rows[table.rows.length - 1].insertCell();
-          newCell.textContent = cell;
-      }
-  }
-  document.body.appendChild(table);
-  console.log(table);
+  
 </div>
