@@ -19,6 +19,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 import { JwtModule } from '@auth0/angular-jwt';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthGuard } from './guards/auth.guard';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 export function tokenGetter() {
   return localStorage.getItem('access_token');
@@ -43,6 +44,7 @@ const appRoutes: Routes = [
     ProfileComponent
   ],
   imports: [
+    PdfViewerModule,
     BrowserModule,
     FormsModule,
     HttpModule,
