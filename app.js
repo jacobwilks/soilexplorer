@@ -117,18 +117,5 @@ sequelize
 // make a loop to add them to a table as it reads??????
   sequelize.query(  "SELECT areasymbol AS Area_symbol, areaname AS Area_name, musym AS Map_unit_symbol, m.mukey AS MUKEY, cropname AS Crop, yldunits AS Units, nonirryield_r AS Non_irrigated, irryield_r AS Irrigated FROM legend AS l INNER JOIN mapunit AS m ON l.lkey = m.lkey AND areasymbol LIKE 'CA604' LEFT OUTER JOIN mucropyld AS y ON m.mukey = y.mukey;" , { type: sequelize.QueryTypes.SELECT})
   .then(users => {
-      console.log(users)
+      console.log(users[0])
   })
-
-
-  /*var table = document.createElement('table'), tr, td, row, cell;
-  for (row = 0; row < 10; row++) {
-      tr = document.createElement('tr');
-      for (cell = 0; cell < 22; cell++) {
-          td = document.createElement('td');
-          tr.appendChild(td);
-          td.innerHTML = row * 22 + cell + 1;
-      }
-      table.appendChild(tr);
-  }
-  document.getElementById('container').appendChild(table);*/
