@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class DashboardComponent implements OnInit {
 
-  pdfSrc: string = '../../SSURGO_Metadata_-_Relationships.pdf';
+  pdfSrc: string = '../assets/SSURGO_Metadata_-_Relationships.pdf';
 
   constructor() { }
 
