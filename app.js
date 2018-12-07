@@ -117,9 +117,10 @@ app.get('/', (req, res) => {
 //   });
 
 // For Local
-app.get('*', (req, res) => {
+/*app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/index.html'));
-  });
+  });*/
+
 
 // For Heroku
 // app.listen(server_port, server_host, function() {
@@ -142,14 +143,6 @@ sequelize
 // users is the entire array of results
 // users[0] gives us the first entry
 // make a loop to add them to a table as it reads??????
-<<<<<<< HEAD
   sequelize.query(  "SELECT areasymbol AS Area_symbol, areaname AS Area_name, musym AS Map_unit_symbol, m.mukey AS MUKEY, cropname AS Crop, yldunits AS Units, nonirryield_r AS Non_irrigated, irryield_r AS Irrigated FROM legend AS l INNER JOIN mapunit AS m ON l.lkey = m.lkey AND areasymbol LIKE 'CA604' LEFT OUTER JOIN mucropyld AS y ON m.mukey = y.mukey;" , { type: sequelize.QueryTypes.SELECT})
   .then(users => {
 })
-      //console.log(users[0])
-=======
-//   sequelize.query(  "SELECT areasymbol AS Area_symbol, areaname AS Area_name, musym AS Map_unit_symbol, m.mukey AS MUKEY, cropname AS Crop, yldunits AS Units, nonirryield_r AS Non_irrigated, irryield_r AS Irrigated FROM legend AS l INNER JOIN mapunit AS m ON l.lkey = m.lkey AND areasymbol LIKE 'CA604' LEFT OUTER JOIN mucropyld AS y ON m.mukey = y.mukey;" , { type: sequelize.QueryTypes.SELECT})
-//   .then(users => {
-//       console.log(users[0])
-//   })
->>>>>>> 18585347ca91a2f521fc7b70bef7334f44bb3df1
