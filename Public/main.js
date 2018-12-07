@@ -494,7 +494,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Dashboard</h2>\n<div>\n    <label>PDF src</label>\n    <input type=\"text\" placeholder=\"PDF src\" [(ngModel)]=\"pdfSrc\">\n</div>\n<pdf-viewer [src]=\"pdfSrc\" \n            [render-text]=\"true\"\n            style=\"display: block;\"\n></pdf-viewer>"
+module.exports = "<h2 class=\"page-header\">Dashboard</h2>\n<!-- <div>\n    <label>PDF src</label>\n    <input type=\"text\" placeholder=\"PDF src\" [(ngModel)]=\"pdfSrc\">\n</div> -->\n<pdf-viewer [src]=\"pdfSrc\" \n            [render-text]=\"true\"\n            style=\"display: block;\"\n></pdf-viewer> "
 
 /***/ }),
 
@@ -521,7 +521,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var DashboardComponent = /** @class */ (function () {
     function DashboardComponent() {
-        this.pdfSrc = '../../SSURGO_Metadata_-_Relationships.pdf';
+        this.pdfSrc = '../assets/SSURGO_Metadata_-_Relationships.pdf';
     }
     DashboardComponent.prototype.ngOnInit = function () {
     };
@@ -621,7 +621,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Login</h2>\n<form (submit)='onLoginSubmit()'>\n  <div class=\"form-group\">\n    <label>Username</label>\n    <label>nathan</label>\n    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"username\" name=\"username\">\n  </div>\n  <div class=\"form-group\">\n    <label>Password</label>\n    <input type=\"password\" class=\"form-control\" [(ngModel)]=\"password\" name=\"password\">\n  </div>\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Login\">\n</form>\n"
+module.exports = "<h2 class=\"page-header\">Login</h2>\n<form (submit)='onLoginSubmit()'>\n  <div class=\"form-group\">\n    <label>Username</label>\n    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"username\" name=\"username\">\n  </div>\n  <div class=\"form-group\">\n    <label>Password</label>\n    <input type=\"password\" class=\"form-control\" [(ngModel)]=\"password\" name=\"password\">\n  </div>\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Login\">\n</form>\n"
 
 /***/ }),
 
