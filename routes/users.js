@@ -58,44 +58,9 @@ router.post('/authenticate', (req, res, next) => {
     })
 });
 
-// Profile
-/*
-router.get('/profile', passport.authenticate('jwt', {session:false}), (req, res, next) => {
-    res.json({user: req.user});
-});
-*/
-//Sequelize
-const Sequelize = require('sequelize');
-const sequelize = new Sequelize('dhmcr2eu1cjkm', 'celgniofihjtjb','12ed9f62a38cc6deebccaf63b808f0998dd0bd4e5abcf1ad976d7d4860b81b74', {
-    host: 'ec2-54-197-249-140.compute-1.amazonaws.com',
-    dialect: 'postgres',
-    operatorsAliases: false,
-
-    pool: {
-        max: 5,
-        min: 0,
-        acquire: 30000,
-        idle: 10000
-    },
-
-    dialectOptions: {
-        ssl: true
-    }
-});
 //Profile
 router.get('/profile', passport.authenticate('jwt', {session:false}), (req, res, next) => {
-    //res.json({user: req.user});
-
-    return sequelize.query(  "SELECT areasymbol AS Area_symbol, areaname AS Area_name, musym AS Map_unit_symbol, m.mukey AS MUKEY, cropname AS Crop, yldunits AS Units, nonirryield_r AS Non_irrigated, irryield_r AS Irrigated FROM legend AS l INNER JOIN mapunit AS m ON l.lkey = m.lkey AND areasymbol LIKE 'CA789' LEFT OUTER JOIN mucropyld AS y ON m.mukey = y.mukey;" , { type: sequelize.QueryTypes.SELECT})
-    .then(users => {
-        if (users){
-            console.log(users[0]);
-            res.json({user: req.user})
-        }
-        else{
-            console.log("failure");
-        }
-    })
+    res.json({user: req.user});
 });
 
 // Validate

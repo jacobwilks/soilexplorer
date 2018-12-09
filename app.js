@@ -26,6 +26,7 @@ const sequelize = new Sequelize('dhmcr2eu1cjkm', 'celgniofihjtjb','12ed9f62a38cc
     }
 });
 
+{
 //---------------------------------------------------------------------//
 // For heroku postgre
 // const { Pool, Client } = require('pg')
@@ -47,32 +48,33 @@ const sequelize = new Sequelize('dhmcr2eu1cjkm', 'celgniofihjtjb','12ed9f62a38cc
 //   client.connect()
 
 // For local postgre
-const { Pool, Client } = require('pg')
-const pool = new Pool({
-    user: 'root',
-    host: 'localhost',
-    database: 'dhmcr2eu1cjkm',
-    password: 'root',
-    port: 5432,
-  })
+// const { Pool, Client } = require('pg')
+// const pool = new Pool({
+//     user: 'root',
+//     host: 'localhost',
+//     database: 'dhmcr2eu1cjkm',
+//     password: 'root',
+//     port: 5432,
+//   })
   
-  const client = new Client({
-    user: 'root',
-    host: 'localhost',
-    database: 'dhmcr2eu1cjkm',
-    password: 'root',
-    port: 5432,
-  })
-  client.connect()
+//   const client = new Client({
+//     user: 'root',
+//     host: 'localhost',
+//     database: 'dhmcr2eu1cjkm',
+//     password: 'root',
+//     port: 5432,
+//   })
+//   client.connect()
 //---------------------------------------------------------------------//
+}
 
 // Connect to Database
 mongoose.connect(config.database);
 
 // Once Connected to DB
 mongoose.connection.on('connected', () => {
-    console.log('connected ssto db, YAY! ' + config.database);
-});
+    console.log('connected to db, YAY! ' + config.database);
+}); 
 
 // If an error connecting to db
 mongoose.connection.on('error', (err) => {
@@ -138,18 +140,3 @@ app.listen(port, 'localhost', function() {
     console.log('Listening on port %d', port);
 });
 //---------------------------------------------------------------------//
-
-sequelize
-  .authenticate()
-  .then(() => {
-    console.log('Connection has been established successfully.'); 
-  })
-  .catch(err => {
-    console.error('Unasdabhatabase:', err);
-  });
-// users is the entire array of results
-// users[0] gives us the first entry
-// make a loop to add them to a table as it reads??????
-//   sequelize.query(  "SELECT areasymbol AS Area_symbol, areaname AS Area_name, musym AS Map_unit_symbol, m.mukey AS MUKEY, cropname AS Crop, yldunits AS Units, nonirryield_r AS Non_irrigated, irryield_r AS Irrigated FROM legend AS l INNER JOIN mapunit AS m ON l.lkey = m.lkey AND areasymbol LIKE 'CA604' LEFT OUTER JOIN mucropyld AS y ON m.mukey = y.mukey;" , { type: sequelize.QueryTypes.SELECT})
-//   .then(users => {
-// })
