@@ -55,8 +55,8 @@ const appRoutes: Routes = [
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
-        whitelistedDomains: ['localhost:3000'],
-        blacklistedRoutes: ['localhost:3000/auth/']
+        whitelistedDomains: ['localhost:8080'],
+        blacklistedRoutes: ['localhost:8080/auth/']
       }
     })
   ],

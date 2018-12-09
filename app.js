@@ -26,7 +26,8 @@ const sequelize = new Sequelize('dhmcr2eu1cjkm', 'celgniofihjtjb','12ed9f62a38cc
     }
 });
 
-// postgre heroku
+//---------------------------------------------------------------------//
+// For heroku postgre
 // const { Pool, Client } = require('pg')
 // const pool = new Pool({
 //     user: 'celgniofihjtjb',
@@ -45,7 +46,7 @@ const sequelize = new Sequelize('dhmcr2eu1cjkm', 'celgniofihjtjb','12ed9f62a38cc
 //   })
 //   client.connect()
 
-// postgre local
+// For local postgre
 const { Pool, Client } = require('pg')
 const pool = new Pool({
     user: 'root',
@@ -63,6 +64,7 @@ const pool = new Pool({
     port: 5432,
   })
   client.connect()
+//---------------------------------------------------------------------//
 
 // Connect to Database
 mongoose.connect(config.database);
@@ -80,12 +82,14 @@ mongoose.connection.on('error', (err) => {
 const app = express();
 const users = require('./routes/users');
 
+//---------------------------------------------------------------------//
 // Port Number For Local
 const port = process.env.port || 8080
 
 // Port Number for Heroku
 //var server_port = process.env.YOUR_PORT || process.env.PORT || 8080;
 //var server_host = process.env.YOUR_HOST || '0.0.0.0';
+//---------------------------------------------------------------------//
 
 app.use(cors());
 
@@ -110,6 +114,7 @@ app.get('/', (req, res) => {
 
 });
 
+//---------------------------------------------------------------------//
 // For Heroku
 // app.get('*', function (req, res) {
 //     const index = path.join(__dirname, 'build', 'index.html');
@@ -117,11 +122,12 @@ app.get('/', (req, res) => {
 //   });
 
 // For Local
-/*app.get('*', (req, res) => {
+app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/index.html'));
-  });*/
+  });
+//---------------------------------------------------------------------//
 
-
+//---------------------------------------------------------------------//
 // For Heroku
 // app.listen(server_port, server_host, function() {
 //     console.log('Listening on port %d', server_port);
@@ -131,6 +137,7 @@ app.get('/', (req, res) => {
 app.listen(port, 'localhost', function() {
     console.log('Listening on port %d', port);
 });
+//---------------------------------------------------------------------//
 
 sequelize
   .authenticate()

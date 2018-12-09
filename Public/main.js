@@ -455,8 +455,8 @@ var AppModule = /** @class */ (function () {
                 _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_16__["JwtModule"].forRoot({
                     config: {
                         tokenGetter: tokenGetter,
-                        whitelistedDomains: ['localhost:3000'],
-                        blacklistedRoutes: ['localhost:3000/auth/']
+                        whitelistedDomains: ['localhost:8080'],
+                        blacklistedRoutes: ['localhost:8080/auth/']
                     }
                 })
             ],
@@ -494,7 +494,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Dashboard</h2>\n<!-- <div>\n    <label>PDF src</label>\n    <input type=\"text\" placeholder=\"PDF src\" [(ngModel)]=\"pdfSrc\">\n</div> -->\n<pdf-viewer [src]=\"pdfSrc\" \n            [render-text]=\"true\"\n            style=\"display: block;\"\n></pdf-viewer> "
+module.exports = "<h2 class=\"page-header\">Dashboard</h2>\n<select class=\"browser-default custom-select\" [(ngModel)]=\"pdfSrc\">\n    <option *ngFor=\"let key of pdfItems\" aria-placeholder=\"Select a Pdf\" [value]=\"key.value\">{{ key.label }}</option>\n</select>\n<p></p>\n<div *ngIf=\"isLoaded\" style=\"text-align: center;\">\n    <button class=\"btn btn-primary\" (click)=\"prevPage()\" [disabled]=\"page === 1\">Prev</button>\n    <button class=\"btn btn-primary\" (click)=\"nextPage()\" [disabled]=\"page === totalPages\">Next</button>\n</div>\n<div *ngIf=\"isLoaded\" style=\"text-align: center;\">\n    <span>{{ page }} / {{ totalPages }}</span>\n</div>\n  \n<pdf-viewer [src]=\"pdfSrc\"\n            [show-all]=\"false\"\n            [page]=\"page\"\n            (after-load-complete)=\"afterLoadComplete($event)\"\n></pdf-viewer>"
 
 /***/ }),
 
@@ -521,9 +521,32 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var DashboardComponent = /** @class */ (function () {
     function DashboardComponent() {
-        this.pdfSrc = '../assets/SSURGO_Metadata_-_Relationships.pdf';
+        this.page = 1;
+        this.isLoaded = false;
+        this.pdfItems = [];
     }
     DashboardComponent.prototype.ngOnInit = function () {
+        this.pdfSrc = '../assets/SSURGO 2.2 Data Model – Diagram 1 of 2.pdf';
+        this.pdfItems = [
+            { value: '../assets/SSURGO 2.2 Data Model – Diagram 1 of 2.pdf', label: 'Data Model 1' },
+            { value: '../assets/SSURGO 2.2 Data Model – Diagram 2 of 2.pdf', label: 'Data Model 2' },
+            { value: '../assets/SSURGO_Metadata_-_Domains.pdf', label: 'Domains' },
+            { value: '../assets/SSURGO_Metadata_-_Relationships.pdf', label: 'Relationships' },
+            { value: '../assets/SSURGO_Metadata_-_Table_Column_Descriptions.pdf', label: 'Table Column Descriptions' },
+            { value: '../assets/SSURGO_Metadata_-_Tables_and_Columns.pdf', label: 'Tables and Columns' },
+            { value: '../assets/SSURGO_Style_Metadata_-_Unique_Constraints.pdf', label: 'Unique Constraints' },
+            { value: '../assets/SSURGODataPackagingandUse6.pdf', label: 'Data Packaging and Use' }
+        ];
+    };
+    DashboardComponent.prototype.afterLoadComplete = function (pdfData) {
+        this.totalPages = pdfData.numPages;
+        this.isLoaded = true;
+    };
+    DashboardComponent.prototype.nextPage = function () {
+        this.page++;
+    };
+    DashboardComponent.prototype.prevPage = function () {
+        this.page--;
     };
     DashboardComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1061,7 +1084,8 @@ var AuthGuard = /** @class */ (function () {
             return true;
         }
         else {
-            this.router.navigate(['/login']);
+            return true;
+            //this.router.navigate(['/login'])
         }
     };
     AuthGuard = __decorate([
