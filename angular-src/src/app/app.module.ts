@@ -13,13 +13,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AuthService } from './services/auth.service';
 import { ValidateService } from './services/validate.service';
-
+import { AdventureTimeService } from './services/adventure-time.service';
 import { NgFlashMessagesModule } from 'ng-flash-messages';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { JwtModule } from '@auth0/angular-jwt';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthGuard } from './guards/auth.guard';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { TableComponent } from './components/table/table.component';
+import { TableRowComponent } from './components/table-row/table-row.component';
 
 export function tokenGetter() {
   return localStorage.getItem('access_token');
@@ -41,7 +43,9 @@ const appRoutes: Routes = [
     RegisterComponent,
     HomeComponent,
     DashboardComponent,
-    ProfileComponent
+    ProfileComponent,
+    TableComponent,
+    TableRowComponent
   ],
   imports: [
     PdfViewerModule,
@@ -63,6 +67,7 @@ const appRoutes: Routes = [
   providers: [
     ValidateService,
     AuthService,
+    AdventureTimeService,
     JwtHelperService,
     AuthGuard
   ],
