@@ -1,0 +1,14 @@
+<table mdbTable small="true">
+    <table>
+      <tr>
+        <th *ngFor="let col of columns" scope="col">
+          {{col}}
+        </th>
+      </tr>
+      <tr *ngFor="let char of characters | async" scope="row">
+        <td *ngFor="let col of columns" scope="row">
+          {{char[col]}}
+        </td>
+      </tr>
+    </table>
+    </table>

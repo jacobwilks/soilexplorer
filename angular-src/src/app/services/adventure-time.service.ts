@@ -12,7 +12,7 @@ getCharacters1(): Observable<any[]>{
   return of(CHARACTERS1);
 }
 getColumns(): string[]{
-  return ["area_symbol","mukey", "crop","units", "map_unit_symbol", "area_name", "non_irrigated", "irrigated"
+  return ["area_symbol","mukey", "crop","units", "map_unit_symbol", "area_name"
 ]};
 
 

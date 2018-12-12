@@ -22,6 +22,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { TableComponent } from './components/table/table.component';
 import { TableRowComponent } from './components/table-row/table-row.component';
+import { Table1Component } from './components/table1/table1.component';
 
 export function tokenGetter() {
   return localStorage.getItem('access_token');
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
     DashboardComponent,
     ProfileComponent,
     TableComponent,
-    TableRowComponent
+    TableRowComponent,
+    Table1Component
   ],
   imports: [
     PdfViewerModule,
