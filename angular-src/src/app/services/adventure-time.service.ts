@@ -11,24 +11,18 @@ getCharacters(): Observable<any[]>{
 getCharacters1(): Observable<any[]>{
   return of(CHARACTERS1);
 }
-
 getCharacters2(): Observable<any[]>{
   return of(CHARACTERS2);
 }
 getColumns(): string[]{
-  return ["area_symbol","mukey","map_unit_symbol", "area_name"
+  return ["Area Symbol","Map Unit Key","Map Unit Symbol", "Area Name"
 ]};
-
-
 getColumns1(): string[]{
-    return ["mukey","cokey", "comppct_r","compname", "taxclname", "taxorder", "taxsuborder", "taxgrtgroup", "taxsubgrp"
+    return ["Map Unit Key","Component Unit Key", "Component Percentage","Soil Series Name", "Description", "Soil Order", "Soil Sub Order", "Taxonomy Great Group", "Taxonomy Sub Group"
   ]};
-
 getColumns2(): string[]{
-    return ["area_symbol","area_name", "map_unit_symbol","mukey", "component", "component_percentage", "eco_class_id", "ecosite_class_name"
+    return ["Area Symbol","Area Name", "Map Unit Symbol","Map Unit Key", "Component", "Component Percentage", "Eco Class ID", "Ecosite Class Name"
   ]};
-  
-
 }
 
 
