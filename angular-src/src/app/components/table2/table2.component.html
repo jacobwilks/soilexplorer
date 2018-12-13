@@ -8,7 +8,7 @@
     </thead>
     <tbody>
     <tr *ngFor="let char of characters | async" scope="row">
-      <td *ngFor="let col of columns" scope="row">
+      <td *ngFor="let col of columns" scope="row" >
         {{char[col]}}
       </td>
     </tr>
