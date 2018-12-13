@@ -770,7 +770,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--Navbar-->\n<nav class =\"navbar navbar-expand-lg navbar-dark unique-color\">\n\n    <!-- Navbar brand -->\n    <mdb-navbar-brand><a class=\"navbar-brand\" [routerLink] = \"['/']\">Soil Explorer</a></mdb-navbar-brand>\n\n    <!-- Collapsible content -->\n    <links>\n        <!-- Links -->\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/']\">Home</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/profile']\">Queries</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/dashboard']\">Dashboard</a></li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/login']\">Login</a></li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/register']\">Register</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\"><a class=\"nav-link waves-light\" mdbWavesEffect (click)=\"onLogoutClick()\" href=\"#\">Logout</a></li>\n        </ul>\n        <!-- Links -->\n    </links>\n    <!-- Collapsible content -->\n\n</nav>\n<!--/.Navbar-->\n"
+module.exports = "<!--Navbar-->\n<nav class =\"navbar sticky-top navbar-expand-lg navbar-dark unique-color\">\n\n    <!-- Navbar brand -->\n    <mdb-navbar-brand><a class=\"navbar-brand\" [routerLink] = \"['/']\">Soil Explorer</a></mdb-navbar-brand>\n\n    <!-- Collapsible content -->\n    <links>\n        <!-- Links -->\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/']\">Home</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/profile']\">Queries</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/dashboard']\">Dashboard</a></li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/login']\">Login</a></li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/register']\">Register</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\"><a class=\"nav-link waves-light\" mdbWavesEffect (click)=\"onLogoutClick()\" href=\"#\">Logout</a></li>\n        </ul>\n        <!-- Links -->\n    </links>\n    <!-- Collapsible content -->\n\n</nav>\n<!--/.Navbar-->\n"
 
 /***/ }),
 
@@ -1511,13 +1511,13 @@ var AuthService = /** @class */ (function () {
     AuthService.prototype.registerUser = function (user) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:8080/users/register', user, { headers: headers })
+        return this.http.post('/users/register', user, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.authenticateUser = function (user) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:8080/users/authenticate', user, { headers: headers })
+        return this.http.post('/users/authenticate', user, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.getProfile = function () {
@@ -1525,7 +1525,7 @@ var AuthService = /** @class */ (function () {
         this.loadToken();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://localhost:8080/users/profile', { headers: headers })
+        return this.http.get('/users/profile', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     // Fetches token from local storage
@@ -1671,7 +1671,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/jacobwilks/soilexplorer/angular-src/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/nathanwlarsen/soilexplorer/angular-src/src/main.ts */"./src/main.ts");
 
 
 /***/ }),
