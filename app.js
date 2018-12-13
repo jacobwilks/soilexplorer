@@ -6,9 +6,7 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database')
 const router = express.Router();
-const pg = require('pg');
 
-// For heroku postgre
 const { Pool, Client } = require('pg')
 const pool = new Pool({
     user: 'celgniofihjtjb',
@@ -19,7 +17,7 @@ const pool = new Pool({
     ssl: true
   })
   
-  const client = new Client({
+const client = new Client({
     user: 'celgniofihjtjb',
     host: 'ec2-54-197-249-140.compute-1.amazonaws.com',
     database: 'dhmcr2eu1cjkm',
@@ -27,7 +25,7 @@ const pool = new Pool({
     port: 5432,
     ssl: true
   })
-  client.connect()
+client.connect()
 
 // Connect to Database
 mongoose.connect(config.database, { useNewUrlParser: true });
@@ -74,7 +72,6 @@ app.use('/users', users);
 // Index Route
 app.get('/', (req, res) => {
     res.send('invalid endpoint');
-    res.render('index');
 });
  
 //---START------------------------------------------------------------------//
@@ -101,3 +98,22 @@ app.listen(port, 'localhost', function() {
     console.log('Listening on port %d', port);
 });
 //---END------------------------------------------------------------------//
+
+// const query = {
+//     name: 'test',
+//     text: 'SELECT areasymbol AS Area_symbol, areaname AS Area_name, musym AS Map_unit_symbol, m.mukey AS MUKEY, cropname AS Crop, yldunits AS Units, nonirryield_r AS Non_irrigated, irryield_r AS Irrigated FROM legend AS l INNER JOIN mapunit AS m ON l.lkey = m.lkey AND areasymbol LIKE $1 LEFT OUTER JOIN mucropyld AS y ON m.mukey = y.mukey',
+//     values: ['CA789']
+//   }
+  
+//   client.query(query, (err, res) => {
+//     if (err) {
+//       console.log(err.stack)
+//     } else {
+//       console.log(res.rows)
+//     }
+//   })
+  
+// //   // promise
+// //   client.query(query)
+// //     .then(res => console.log(res.rows[0]))
+// //     .catch(e => console.error(e.stack))
