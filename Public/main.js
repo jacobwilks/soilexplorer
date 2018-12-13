@@ -386,18 +386,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! angular-bootstrap-md */ "./node_modules/angular-bootstrap-md/esm5/angular-bootstrap-md.es5.js");
 /* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./services/auth.service */ "./src/app/services/auth.service.ts");
 /* harmony import */ var _services_validate_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./services/validate.service */ "./src/app/services/validate.service.ts");
-/* harmony import */ var ng_flash_messages__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ng-flash-messages */ "./node_modules/ng-flash-messages/ng-flash-messages.umd.js");
-/* harmony import */ var ng_flash_messages__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(ng_flash_messages__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @auth0/angular-jwt */ "./node_modules/@auth0/angular-jwt/index.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _guards_auth_guard__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./guards/auth.guard */ "./src/app/guards/auth.guard.ts");
-/* harmony import */ var ng2_pdf_viewer__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ng2-pdf-viewer */ "./node_modules/ng2-pdf-viewer/ng2-pdf-viewer.es5.js");
+/* harmony import */ var _services_adventure_time_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./services/adventure-time.service */ "./src/app/services/adventure-time.service.ts");
+/* harmony import */ var ng_flash_messages__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ng-flash-messages */ "./node_modules/ng-flash-messages/ng-flash-messages.umd.js");
+/* harmony import */ var ng_flash_messages__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(ng_flash_messages__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @auth0/angular-jwt */ "./node_modules/@auth0/angular-jwt/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _guards_auth_guard__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./guards/auth.guard */ "./src/app/guards/auth.guard.ts");
+/* harmony import */ var ng2_pdf_viewer__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ng2-pdf-viewer */ "./node_modules/ng2-pdf-viewer/ng2-pdf-viewer.es5.js");
+/* harmony import */ var _components_table_table_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/table/table.component */ "./src/app/components/table/table.component.ts");
+/* harmony import */ var _components_table_row_table_row_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/table-row/table-row.component */ "./src/app/components/table-row/table-row.component.ts");
+/* harmony import */ var _components_table1_table1_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/table1/table1.component */ "./src/app/components/table1/table1.component.ts");
+/* harmony import */ var _components_table2_table2_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/table2/table2.component */ "./src/app/components/table2/table2.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
+
 
 
 
@@ -426,8 +436,8 @@ var appRoutes = [
     { path: '', component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"] },
     { path: 'register', component: _components_register_register_component__WEBPACK_IMPORTED_MODULE_7__["RegisterComponent"] },
     { path: 'login', component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_6__["LoginComponent"] },
-    { path: 'dashboard', component: _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_9__["DashboardComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_18__["AuthGuard"]] },
-    { path: 'profile', component: _components_profile_profile_component__WEBPACK_IMPORTED_MODULE_10__["ProfileComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_18__["AuthGuard"]] }
+    { path: 'dashboard', component: _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_9__["DashboardComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_19__["AuthGuard"]] },
+    { path: 'profile', component: _components_profile_profile_component__WEBPACK_IMPORTED_MODULE_10__["ProfileComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_19__["AuthGuard"]] }
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -441,18 +451,22 @@ var AppModule = /** @class */ (function () {
                 _components_register_register_component__WEBPACK_IMPORTED_MODULE_7__["RegisterComponent"],
                 _components_home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"],
                 _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_9__["DashboardComponent"],
-                _components_profile_profile_component__WEBPACK_IMPORTED_MODULE_10__["ProfileComponent"]
+                _components_profile_profile_component__WEBPACK_IMPORTED_MODULE_10__["ProfileComponent"],
+                _components_table_table_component__WEBPACK_IMPORTED_MODULE_21__["TableComponent"],
+                _components_table_row_table_row_component__WEBPACK_IMPORTED_MODULE_22__["TableRowComponent"],
+                _components_table1_table1_component__WEBPACK_IMPORTED_MODULE_23__["Table1Component"],
+                _components_table2_table2_component__WEBPACK_IMPORTED_MODULE_24__["Table2Component"]
             ],
             imports: [
-                ng2_pdf_viewer__WEBPACK_IMPORTED_MODULE_19__["PdfViewerModule"],
+                ng2_pdf_viewer__WEBPACK_IMPORTED_MODULE_20__["PdfViewerModule"],
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
                 _angular_http__WEBPACK_IMPORTED_MODULE_3__["HttpModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_11__["RouterModule"].forRoot(appRoutes),
                 angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_12__["MDBBootstrapModule"].forRoot(),
-                ng_flash_messages__WEBPACK_IMPORTED_MODULE_15__["NgFlashMessagesModule"].forRoot(),
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_17__["HttpClientModule"],
-                _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_16__["JwtModule"].forRoot({
+                ng_flash_messages__WEBPACK_IMPORTED_MODULE_16__["NgFlashMessagesModule"].forRoot(),
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_18__["HttpClientModule"],
+                _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_17__["JwtModule"].forRoot({
                     config: {
                         tokenGetter: tokenGetter,
                         whitelistedDomains: ['localhost:8080'],
@@ -463,8 +477,9 @@ var AppModule = /** @class */ (function () {
             providers: [
                 _services_validate_service__WEBPACK_IMPORTED_MODULE_14__["ValidateService"],
                 _services_auth_service__WEBPACK_IMPORTED_MODULE_13__["AuthService"],
-                _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_16__["JwtHelperService"],
-                _guards_auth_guard__WEBPACK_IMPORTED_MODULE_18__["AuthGuard"]
+                _services_adventure_time_service__WEBPACK_IMPORTED_MODULE_15__["AdventureTimeService"],
+                _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_17__["JwtHelperService"],
+                _guards_auth_guard__WEBPACK_IMPORTED_MODULE_19__["AuthGuard"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
         })
@@ -755,7 +770,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--Navbar-->\n<nav class =\"navbar navbar-expand-lg navbar-dark unique-color\">\n\n    <!-- Navbar brand -->\n    <mdb-navbar-brand><a class=\"navbar-brand\" [routerLink] = \"['/']\">Soil Explorer</a></mdb-navbar-brand>\n\n    <!-- Collapsible content -->\n    <links>\n        <!-- Links -->\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/']\">Home</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/profile']\">Profile</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/dashboard']\">Dashboard</a></li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/login']\">Login</a></li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/register']\">Register</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\"><a class=\"nav-link waves-light\" mdbWavesEffect (click)=\"onLogoutClick()\" href=\"#\">Logout</a></li>\n        </ul>\n        <!-- Links -->\n    </links>\n    <!-- Collapsible content -->\n\n</nav>\n<!--/.Navbar-->\n"
+module.exports = "<!--Navbar-->\n<nav class =\"navbar navbar-expand-lg navbar-dark unique-color\">\n\n    <!-- Navbar brand -->\n    <mdb-navbar-brand><a class=\"navbar-brand\" [routerLink] = \"['/']\">Soil Explorer</a></mdb-navbar-brand>\n\n    <!-- Collapsible content -->\n    <links>\n        <!-- Links -->\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/']\">Home</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/profile']\">Queries</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/dashboard']\">Dashboard</a></li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/login']\">Login</a></li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/register']\">Register</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\"><a class=\"nav-link waves-light\" mdbWavesEffect (click)=\"onLogoutClick()\" href=\"#\">Logout</a></li>\n        </ul>\n        <!-- Links -->\n    </links>\n    <!-- Collapsible content -->\n\n</nav>\n<!--/.Navbar-->\n"
 
 /***/ }),
 
@@ -845,7 +860,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"user\">\n  <h2 class=\"page-header\">{{user.name}}</h2>\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">Username: {{user.username}}</li>\n    <li class=\"list-group-item\">Email: {{user.email}}</li>\n  </ul>\n</div>"
+module.exports = "<!--<div *ngIf=\"user\">\n  <h2 class=\"page-header\">{{user.name}}</h2>\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">Username: {{user.username}}</li>\n    <li class=\"list-group-item\">Email: {{user.email}}</li>\n  </ul>\n</div>\n-->\n<div id=\"qList\"></div>\n<a href=\"http://localhost:8080/profile#q1\">Query One</a><br>\n<a href=\"http://localhost:8080/profile#q2\">Query Two</a><br>\n<a href=\"http://localhost:8080/profile#q3\">Query Three</a><br>\n<div class=\"app-component\" id=\"q1\">\n    <h1 class=\"text-center\">Lassen National Park Map Unit information</h1>\n    <app-table></app-table>\n</div>\n\n<a href=\"http://localhost:8080/profile#qList\">Top</a>\n\n<div class=\"app-component\" id=\"q2\">\n    <h1 class=\"text-center\">Soil Taxonomy in Lassen National Park</h1>\n    <app-table1></app-table1>\n</div>\n<a href=\"http://localhost:8080/profile#qList\">Top</a>\n<div class=\"app-component\" id=\"q3\">\n    <h1 class=\"text-center\">Ecological Site by Area Symbol</h1>\n    <app-table2></app-table2>\n</div>\n<a href=\"http://localhost:8080/profile#qList\">Top</a>"
 
 /***/ }),
 
@@ -1049,6 +1064,279 @@ var RegisterComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/table-row/table-row.component.html":
+/*!***************************************************************!*\
+  !*** ./src/app/components/table-row/table-row.component.html ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  table-row works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/table-row/table-row.component.scss":
+/*!***************************************************************!*\
+  !*** ./src/app/components/table-row/table-row.component.scss ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/table-row/table-row.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/components/table-row/table-row.component.ts ***!
+  \*************************************************************/
+/*! exports provided: TableRowComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TableRowComponent", function() { return TableRowComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var TableRowComponent = /** @class */ (function () {
+    function TableRowComponent() {
+    }
+    TableRowComponent.prototype.ngOnInit = function () {
+    };
+    TableRowComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-table-row',
+            template: __webpack_require__(/*! ./table-row.component.html */ "./src/app/components/table-row/table-row.component.html"),
+            styles: [__webpack_require__(/*! ./table-row.component.scss */ "./src/app/components/table-row/table-row.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], TableRowComponent);
+    return TableRowComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/table/table.component.html":
+/*!*******************************************************!*\
+  !*** ./src/app/components/table/table.component.html ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<table mdbTable class=\"table table-striped table-dark\" hover=\"true\" >\n  <thead>\n  <tr>\n    <th *ngFor=\"let col of columns\" scope=\"col\">\n      {{col}}\n    </th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let char of characters | async\" scope=\"row\">\n    <td *ngFor=\"let col of columns\" scope=\"row\">\n      {{char[col]}}\n    </td>\n  </tr>\n</tbody>\n</table>"
+
+/***/ }),
+
+/***/ "./src/app/components/table/table.component.scss":
+/*!*******************************************************!*\
+  !*** ./src/app/components/table/table.component.scss ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/table/table.component.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/components/table/table.component.ts ***!
+  \*****************************************************/
+/*! exports provided: TableComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TableComponent", function() { return TableComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_adventure_time_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/adventure-time.service */ "./src/app/services/adventure-time.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var TableComponent = /** @class */ (function () {
+    function TableComponent(atService) {
+        this.atService = atService;
+    }
+    TableComponent.prototype.ngOnInit = function () {
+        this.columns = this.atService.getColumns();
+        //["name", "age", "species", "occupation"]
+        this.characters = this.atService.getCharacters();
+        //all data in mock-data.ts
+    };
+    TableComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-table',
+            template: __webpack_require__(/*! ./table.component.html */ "./src/app/components/table/table.component.html"),
+            styles: [__webpack_require__(/*! ./table.component.scss */ "./src/app/components/table/table.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_services_adventure_time_service__WEBPACK_IMPORTED_MODULE_1__["AdventureTimeService"]])
+    ], TableComponent);
+    return TableComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/table1/table1.component.html":
+/*!*********************************************************!*\
+  !*** ./src/app/components/table1/table1.component.html ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<table mdbTable class=\"table table-striped table-dark\" hover=\"true\" >\n    <thead>\n    <tr>\n      <th *ngFor=\"let col of columns\" scope=\"col\">\n        {{col}}\n      </th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr *ngFor=\"let char of characters | async\" scope=\"row\">\n      <td *ngFor=\"let col of columns\" scope=\"row\">\n        {{char[col]}}\n      </td>\n    </tr>\n  </tbody>\n  </table>"
+
+/***/ }),
+
+/***/ "./src/app/components/table1/table1.component.scss":
+/*!*********************************************************!*\
+  !*** ./src/app/components/table1/table1.component.scss ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/table1/table1.component.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/components/table1/table1.component.ts ***!
+  \*******************************************************/
+/*! exports provided: Table1Component */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Table1Component", function() { return Table1Component; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_adventure_time_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/adventure-time.service */ "./src/app/services/adventure-time.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var Table1Component = /** @class */ (function () {
+    function Table1Component(atService) {
+        this.atService = atService;
+    }
+    Table1Component.prototype.ngOnInit = function () {
+        this.columns = this.atService.getColumns1();
+        //["name", "age", "species", "occupation"]
+        this.characters = this.atService.getCharacters1();
+        //all data in mock-data.ts
+    };
+    Table1Component = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-table1',
+            template: __webpack_require__(/*! ./table1.component.html */ "./src/app/components/table1/table1.component.html"),
+            styles: [__webpack_require__(/*! ./table1.component.scss */ "./src/app/components/table1/table1.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_services_adventure_time_service__WEBPACK_IMPORTED_MODULE_1__["AdventureTimeService"]])
+    ], Table1Component);
+    return Table1Component;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/table2/table2.component.html":
+/*!*********************************************************!*\
+  !*** ./src/app/components/table2/table2.component.html ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<table mdbTable class=\"table table-striped table-dark\" hover=\"true\" >\n    <thead>\n    <tr>\n      <th *ngFor=\"let col of columns\" scope=\"col\">\n        {{col}}\n      </th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr *ngFor=\"let char of characters | async\" scope=\"row\">\n      <td *ngFor=\"let col of columns\" scope=\"row\" >\n        {{char[col]}}\n      </td>\n    </tr>\n  </tbody>\n  </table>"
+
+/***/ }),
+
+/***/ "./src/app/components/table2/table2.component.scss":
+/*!*********************************************************!*\
+  !*** ./src/app/components/table2/table2.component.scss ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/table2/table2.component.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/components/table2/table2.component.ts ***!
+  \*******************************************************/
+/*! exports provided: Table2Component */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Table2Component", function() { return Table2Component; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_adventure_time_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/adventure-time.service */ "./src/app/services/adventure-time.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var Table2Component = /** @class */ (function () {
+    function Table2Component(atService) {
+        this.atService = atService;
+    }
+    Table2Component.prototype.ngOnInit = function () {
+        this.columns = this.atService.getColumns2();
+        //["name", "age", "species", "occupation"]
+        this.characters = this.atService.getCharacters2();
+        //all data in mock-data.ts
+    };
+    Table2Component = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-table2',
+            template: __webpack_require__(/*! ./table2.component.html */ "./src/app/components/table2/table2.component.html"),
+            styles: [__webpack_require__(/*! ./table2.component.scss */ "./src/app/components/table2/table2.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_services_adventure_time_service__WEBPACK_IMPORTED_MODULE_1__["AdventureTimeService"]])
+    ], Table2Component);
+    return Table2Component;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/guards/auth.guard.ts":
 /*!**************************************!*\
   !*** ./src/app/guards/auth.guard.ts ***!
@@ -1094,6 +1382,93 @@ var AuthGuard = /** @class */ (function () {
             _services_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"]])
     ], AuthGuard);
     return AuthGuard;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/mockdata.ts":
+/*!*****************************!*\
+  !*** ./src/app/mockdata.ts ***!
+  \*****************************/
+/*! exports provided: CHARACTERS, CHARACTERS1, CHARACTERS2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CHARACTERS", function() { return CHARACTERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CHARACTERS1", function() { return CHARACTERS1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CHARACTERS2", function() { return CHARACTERS2; });
+var CHARACTERS = [{ "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "104", "Map Unit Key": "1869357", "Crop": null, "Units": null, "non_irrigated": null, "irrigated": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "105", "Map Unit Key": "1869358", "Crop": null, "Units": null, "non_irrigated": null, "irrigated": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "106", "Map Unit Key": "1869359", "Crop": null, "Units": null, "non_irrigated": null, "irrigated": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "107", "Map Unit Key": "1869360", "Crop": null, "Units": null, "non_irrigated": null, "irrigated": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "108", "Map Unit Key": "1869361", "Crop": null, "Units": null, "non_irrigated": null, "irrigated": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "112", "Map Unit Key": "1869362", "Crop": null, "Units": null, "non_irrigated": null, "irrigated": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "115", "Map Unit Key": "1869363", "Crop": null, "Units": null, "non_irrigated": null, "irrigated": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "116", "Map Unit Key": "1869364", "Crop": null, "Units": null, "non_irrigated": null, "irrigated": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "127", "Map Unit Key": "1869365", "Crop": null, "Units": null, "non_irrigated": null, "irrigated": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "120", "Map Unit Key": "1883758", "Crop": null, "Units": null, "non_irrigated": null, "irrigated": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "129", "Map Unit Key": "1883759", "Crop": null, "Units": null, "non_irrigated": null, "irrigated": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "126", "Map Unit Key": "1883760", "Crop": null, "Units": null, "non_irrigated": null, "irrigated": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "117", "Map Unit Key": "1883762", "Crop": null, "Units": null, "non_irrigated": null, "irrigated": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "125", "Map Unit Key": "1883764", "Crop": null, "Units": null, "non_irrigated": null, "irrigated": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "130", "Map Unit Key": "1883765", "Crop": null, "Units": null, "non_irrigated": null, "irrigated": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "102", "Map Unit Key": "1883766", "Crop": null, "Units": null, "non_irrigated": null, "irrigated": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "109", "Map Unit Key": "1883767", "Crop": null, "Units": null, "non_irrigated": null, "irrigated": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "110", "Map Unit Key": "1883768", "Crop": null, "Units": null, "non_irrigated": null, "irrigated": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "122", "Map Unit Key": "1883769", "Crop": null, "Units": null, "non_irrigated": null, "irrigated": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "113", "Map Unit Key": "1883770", "Crop": null, "Units": null, "non_irrigated": null, "irrigated": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "114", "Map Unit Key": "1883771", "Crop": null, "Units": null, "non_irrigated": null, "irrigated": null },
+];
+var CHARACTERS1 = [{ "Map Unit Key": "1869359", "Component Unit Key": "16633337", "Component Percentage": 5,
+        "Soil Series Name": "Cascadesprings", "Description": "Ashy over medial-skeletal, glassy over amorphic, frigid Typic Vitrixerands", "Soil Order": "Andisols", "Soil Sub Order": "Xerands", "Taxonomy Great Group": "Vitrixerands", "Taxonomy Sub Group": "Typic Vitrixerands" }, { "Map Unit Key": "1869359", "Component Unit Key": "16633338", "Component Percentage": 70, "Soil Series Name": "Cenplat", "Description": "Ashy over medial-skeletal, glassy over amorphic, frigid Typic Haploxerands", "Soil Order": "Andisols", "Soil Sub Order": "Xerands", "Taxonomy Great Group": "Haploxerands", "Taxonomy Sub Group": "Typic Haploxerands" }, { "Map Unit Key": "1869359", "Component Unit Key": "16633339", "Component Percentage": 7, "Soil Series Name": "Badgerflat", "Description": "Ashy-skeletal, mixed, frigid Typic Vitrixerands", "Soil Order": "Andisols", "Soil Sub Order": "Xerands", "Taxonomy Great Group": "Vitrixerands", "Taxonomy Sub Group": "Typic Vitrixerands" }, { "Map Unit Key": "1869359", "Component Unit Key": "16633340", "Component Percentage": 1, "Soil Series Name": "Buttewash", "Description": "Ashy over medial, glassy over amorphic, frigid Humic Haploxerands", "Soil Order": "Andisols", "Soil Sub Order": "Xerands", "Taxonomy Great Group": "Haploxerands", "Taxonomy Sub Group": "Humic Haploxerands" }, { "Map Unit Key": "1869360", "Component Unit Key": "16633341", "Component Percentage": 1, "Soil Series Name": "Rubble land", "Description": null, "Soil Order": null, "Soil Sub Order": null, "Taxonomy Great Group": null, "Taxonomy Sub Group": null }, { "Map Unit Key": "1869360", "Component Unit Key": "16633342", "Component Percentage": 35, "Soil Series Name": "Cenplat", "Description": "Ashy over medial-skeletal, glassy over amorphic, frigid Typic Haploxerands", "Soil Order": "Andisols", "Soil Sub Order": "Xerands", "Taxonomy Great Group": "Haploxerands", "Taxonomy Sub Group": "Typic Haploxerands" }, { "Map Unit Key": "1869360", "Component Unit Key": "16633343", "Component Percentage": 40, "Soil Series Name": "Badgerflat", "Description": "Ashy-skeletal, mixed, frigid Typic Vitrixerands", "Soil Order": "Andisols", "Soil Sub Order": "Xerands", "Taxonomy Great Group": "Vitrixerands", "Taxonomy Sub Group": "Typic Vitrixerands" }, { "Map Unit Key": "1869360", "Component Unit Key": "16633344", "Component Percentage": 3, "Soil Series Name": "Dittmar", "Description": "Medial-skeletal, amorphic, frigid Lithic Haploxerands", "Soil Order": "Andisols", "Soil Sub Order": "Xerands", "Taxonomy Great Group": "Haploxerands", "Taxonomy Sub Group": "Lithic Haploxerands" }, { "Map Unit Key": "1869360", "Component Unit Key": "16633345", "Component Percentage": 3, "Soil Series Name": "Juniperlake", "Description": "Medial-skeletal, amorphic, frigid Humic Haploxerands", "Soil Order": "Andisols", "Soil Sub Order": "Xerands", "Taxonomy Great Group": "Haploxerands", "Taxonomy Sub Group": "Humic Haploxerands" }, { "Map Unit Key": "1869360", "Component Unit Key": "16633346", "Component Percentage": 10, "Soil Series Name": "Rock outCrop", "Description": null, "Soil Order": null, "Soil Sub Order": null, "Taxonomy Great Group": null, "Taxonomy Sub Group": null }, { "Map Unit Key": "1869360", "Component Unit Key": "16633347", "Component Percentage": 3, "Soil Series Name": "Buttelake", "Description": "Ashy over medial-skeletal, glassy over amorphic, frigid Humic Vitrixerands", "Soil Order": "Andisols", "Soil Sub Order": "Xerands", "Taxonomy Great Group": "Vitrixerands", "Taxonomy Sub Group": "Humic Vitrixerands" }, { "Map Unit Key": "1869360", "Component Unit Key": "16633348", "Component Percentage": 3, "Soil Series Name": "Scoured", "Description": "Medial-skeletal over fragmental or cindery, amorphic over isotic, frigid Humic Haploxerands", "Soil Order": "Andisols", "Soil Sub Order": "Xerands", "Taxonomy Great Group": "Haploxerands", "Taxonomy Sub Group": "Humic Haploxerands" }, { "Map Unit Key": "1869360", "Component Unit Key": "16633349", "Component Percentage": 2, "Soil Series Name": "Sunhoff", "Description": "Medial-skeletal, amorphic, frigid Typic Vitrixerands", "Soil Order": "Andisols", "Soil Sub Order": "Xerands", "Taxonomy Great Group": "Vitrixerands", "Taxonomy Sub Group": "Typic Vitrixerands" }, { "Map Unit Key": "1869361", "Component Unit Key": "16633350", "Component Percentage": 3, "Soil Series Name": "Humic Haploxerands", "Description": "Frigid Humic Haploxerands", "Soil Order": "Andisols", "Soil Sub Order": "Xerands", "Taxonomy Great Group": "Haploxerands", "Taxonomy Sub Group": "Humic Haploxerands" }, { "Map Unit Key": "1869361", "Component Unit Key": "16633351", "Component Percentage": 80, "Soil Series Name": "Typic Xerorthents", "Description": "Frigid Typic Xerorthents", "Soil Order": "Entisols", "Soil Sub Order": "Orthents", "Taxonomy Great Group": "Xerorthents", "Taxonomy Sub Group": "Typic Xerorthents" }, { "Map Unit Key": "1869361", "Component Unit Key": "16633352", "Component Percentage": 2, "Soil Series Name": "Buttelake", "Description": "Ashy over medial-skeletal, glassy over amorphic, frigid Humic Vitrixerands", "Soil Order": "Andisols", "Soil Sub Order": "Xerands", "Taxonomy Great Group": "Vitrixerands", "Taxonomy Sub Group": "Humic Vitrixerands" }, { "Map Unit Key": "1869361", "Component Unit Key": "16633353", "Component Percentage": 5, "Soil Series Name": "Typic Xerorthents", "Description": "Frigid Typic Xerorthents", "Soil Order": "Entisols", "Soil Sub Order": "Orthents", "Taxonomy Great Group": "Xerorthents", "Taxonomy Sub Group": "Typic Xerorthents" }, { "Map Unit Key": "1869361", "Component Unit Key": "16633354", "Component Percentage": 10, "Soil Series Name": "Buttewash", "Description": "Ashy over medial, glassy over amorphic, frigid Humic Haploxerands", "Soil Order": "Andisols", "Soil Sub Order": "Xerands", "Taxonomy Great Group": "Haploxerands", "Taxonomy Sub Group": "Humic Haploxerands" }, { "Map Unit Key": "1869362", "Component Unit Key": "16633366", "Component Percentage": 2, "Soil Series Name": "Emeraldlake", "Description": "Ashy-skeletal, amorphic, nonacid Vitrandic Cryorthents", "Soil Order": "Entisols", "Soil Sub Order": "Orthents", "Taxonomy Great Group": "Cryorthents", "Taxonomy Sub Group": "Vitrandic Cryorthents" }, { "Map Unit Key": "1869362", "Component Unit Key": "16633367", "Component Percentage": 13, "Soil Series Name": "Terracelake", "Description": "Ashy-skeletal, amorphic Xeric Vitricryands", "Soil Order": "Andisols", "Soil Sub Order": "Cryands", "Taxonomy Great Group": "Vitricryands", "Taxonomy Sub Group": "Xeric Vitricryands" }, { "Map Unit Key": "1869362", "Component Unit Key": "16633368", "Component Percentage": 85, "Soil Series Name": "Cascadesprings", "Description": "Ashy over medial-skeletal, glassy over amorphic, frigid Typic Vitrixerands", "Soil Order": "Andisols", "Soil Sub Order": "Xerands", "Taxonomy Great Group": "Vitrixerands", "Taxonomy Sub Group": "Typic Vitrixerands" }, { "Map Unit Key": "1869363", "Component Unit Key": "16633383", "Component Percentage": 10, "Soil Series Name": "Terracelake", "Description": "Ashy-skeletal, amorphic Xeric Vitricryands", "Soil Order": "Andisols", "Soil Sub Order": "Cryands", "Taxonomy Great Group": "Vitricryands", "Taxonomy Sub Group": "Xeric Vitricryands" }, { "Map Unit Key": "1869363", "Component Unit Key": "16633384", "Component Percentage": 85, "Soil Series Name": "Shadowlake", "Description": "Ashy-skeletal, glassy Xeric Vitricryands", "Soil Order": "Andisols", "Soil Sub Order": "Cryands", "Taxonomy Great Group": "Vitricryands", "Taxonomy Sub Group": "Xeric Vitricryands" }, { "Map Unit Key": "1869363", "Component Unit Key": "16633385", "Component Percentage": 5, "Soil Series Name": "Xeric Vitricryands", "Description": "Xeric Vitricryands", "Soil Order": "Andisols", "Soil Sub Order": "Cryands", "Taxonomy Great Group": "Vitricryands", "Taxonomy Sub Group": "Xeric Vitricryands" }, { "Map Unit Key": "1869364", "Component Unit Key": "16633386", "Component Percentage": 30, "Soil Series Name": "Xeric Vitricryands", "Description": "Xeric Vitricryands", "Soil Order": "Andisols", "Soil Sub Order": "Cryands", "Taxonomy Great Group": "Vitricryands", "Taxonomy Sub Group": "Xeric Vitricryands" }, { "Map Unit Key": "1869364", "Component Unit Key": "16633387", "Component Percentage": 15, "Soil Series Name": "Rock outCrop", "Description": null, "Soil Order": null, "Soil Sub Order": null, "Taxonomy Great Group": null, "Taxonomy Sub Group": null }, { "Map Unit Key": "1869364", "Component Unit Key": "16633388", "Component Percentage": 15, "Soil Series Name": "Xeric Vitricryands", "Description": "Xeric Vitricryands", "Soil Order": "Andisols", "Soil Sub Order": "Cryands", "Taxonomy Great Group": "Vitricryands", "Taxonomy Sub Group": "Xeric Vitricryands" }, { "Map Unit Key": "1869364", "Component Unit Key": "16633389", "Component Percentage": 10, "Soil Series Name": "Humic Xeric Vitricryands", "Description": "Humic Xeric Vitricryands", "Soil Order": "Andisols", "Soil Sub Order": "Cryands", "Taxonomy Great Group": "Vitricryands", "Taxonomy Sub Group": "Humic Xeric Vitricryands" }, { "Map Unit Key": "1869364", "Component Unit Key": "16633390", "Component Percentage": 5, "Soil Series Name": "ACroph", "Description": "Ashy-skeletal, glassy Lithic Vitricryands", "Soil Order": "Andisols", "Soil Sub Order": "Cryands", "Taxonomy Great Group": "Vitricryands", "Taxonomy Sub Group": "Lithic Vitricryands" }, { "Map Unit Key": "1869364", "Component Unit Key": "16633391", "Component Percentage": 25, "Soil Series Name": "Terracelake", "Description": "Ashy-skeletal, amorphic Xeric Vitricryands", "Soil Order": "Andisols", "Soil Sub Order": "Cryands", "Taxonomy Great Group": "Vitricryands", "Taxonomy Sub Group": "Xeric Vitricryands" }, { "Map Unit Key": "1869365", "Component Unit Key": "16633428", "Component Percentage": 4, "Soil Series Name": "Aquandic Humaquepts", "Description": "Frigid Aquandic Humaquepts", "Soil Order": "Inceptisols", "Soil Sub Order": "Aquepts", "Taxonomy Great Group": "Humaquepts", "Taxonomy Sub Group": "Aquandic Humaquepts" }, { "Map Unit Key": "1869365", "Component Unit Key": "16633429", "Component Percentage": 5, "Soil Series Name": "Humic Haploxerands", "Description": "Frigid Humic Haploxerands", "Soil Order": "Andisols", "Soil Sub Order": "Xerands", "Taxonomy Great Group": "Haploxerands", "Taxonomy Sub Group": "Humic Haploxerands" }
+];
+var CHARACTERS2 = [{ "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "157", "Map Unit Key": "2377744", "Component": "Typic Vitrixerands", "Component Percentage": 90, "Eco Class ID": "F022BI103CA", "Ecosite Class Name": "Frigid Tephra Over Slopes And Flats" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "158", "Map Unit Key": "2377745", "Component": "Rock outCrop", "Component Percentage": 20, "Eco Class ID": null, "Ecosite Class Name": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "158", "Map Unit Key": "2377745", "Component": "Typic Vitrixerands", "Component Percentage": 75, "Eco Class ID": "F022BI121CA", "Ecosite Class Name": "Frigid Shallow Or Moderately Deep Medial-Skeletal Slopes" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "159", "Map Unit Key": "2377746", "Component": "Rubble land", "Component Percentage": 15, "Eco Class ID": null, "Ecosite Class Name": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "159", "Map Unit Key": "2377746", "Component": "Typic Vitrixerands", "Component Percentage": 40, "Eco Class ID": "F022BI121CA", "Ecosite Class Name": "Frigid Shallow Or Moderately Deep Medial-Skeletal Slopes" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "159", "Map Unit Key": "2377746", "Component": "Typic Vitrixerands", "Component Percentage": 35, "Eco Class ID": "F022BI103CA", "Ecosite Class Name": "Frigid Tephra Over Slopes And Flats" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "160", "Map Unit Key": "2377747", "Component": "Aeric Endoaquents", "Component Percentage": 45, "Eco Class ID": "R022BI215CA", "Ecosite Class Name": "Frigid Gravelly Flood Plains" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "160", "Map Unit Key": "2377747", "Component": "Humic Haploxerands", "Component Percentage": 35, "Eco Class ID": "F022BI110CA", "Ecosite Class Name": "Frigid Humic Loamy Gentle Slopes" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "160", "Map Unit Key": "2377747", "Component": "Riverwash", "Component Percentage": 15, "Eco Class ID": null, "Ecosite Class Name": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "161", "Map Unit Key": "2377748", "Component": "Typic Psammaquents", "Component Percentage": 95, "Eco Class ID": "R022BI213CA", "Ecosite Class Name": "Frigid Sandy Flood Plains" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "162", "Map Unit Key": "2377749", "Component": "Humic Haploxerands", "Component Percentage": 95, "Eco Class ID": "F022BI103CA", "Ecosite Class Name": "Frigid Tephra Over Slopes And Flats" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "163", "Map Unit Key": "2377750", "Component": "Aquandic Cryaquents", "Component Percentage": 30, "Eco Class ID": "R022BI206CA", "Ecosite Class Name": "Cryic Lacustrine Flat" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "163", "Map Unit Key": "2377750", "Component": "Vitrandic Cryofluvents", "Component Percentage": 65, "Eco Class ID": "R022BI206CA", "Ecosite Class Name": "Cryic Lacustrine Flat" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "164", "Map Unit Key": "2384079", "Component": "Aquepts", "Component Percentage": 35, "Eco Class ID": "R022BI211CA", "Ecosite Class Name": "Spring Complex" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "164", "Map Unit Key": "2384079", "Component": "Aquic Haploxerands", "Component Percentage": 20, "Eco Class ID": "F022BI120CA", "Ecosite Class Name": "Frigid Gravelly Sandy Loam Outwash-Stream Terraces" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "164", "Map Unit Key": "2384079", "Component": "Typic Petraquepts", "Component Percentage": 25, "Eco Class ID": "R022BI211CA", "Ecosite Class Name": "Spring Complex" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "164", "Map Unit Key": "2384079", "Component": "Typic Petraquepts", "Component Percentage": 10, "Eco Class ID": "R022BI218CA", "Ecosite Class Name": "Thermal Seeps" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "165", "Map Unit Key": "2384164", "Component": "Aquandic Endoaquepts", "Component Percentage": 20, "Eco Class ID": "R022BI202CA", "Ecosite Class Name": "Frigid Alluvial Flat" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "165", "Map Unit Key": "2384164", "Component": "Aquandic Humaquepts", "Component Percentage": 35, "Eco Class ID": "R022BI202CA", "Ecosite Class Name": "Frigid Alluvial Flat" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "165", "Map Unit Key": "2384164", "Component": "Histic Humaquepts", "Component Percentage": 25, "Eco Class ID": "R022BI202CA", "Ecosite Class Name": "Frigid Alluvial Flat" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "165", "Map Unit Key": "2384164", "Component": "Terric Haplohemists", "Component Percentage": 15, "Eco Class ID": "R022BI202CA", "Ecosite Class Name": "Frigid Alluvial Flat" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "166", "Map Unit Key": "2391373", "Component": "Aquic Haploxerands", "Component Percentage": 50, "Eco Class ID": "F022BI120CA", "Ecosite Class Name": "Frigid Gravelly Sandy Loam Outwash-Stream Terraces" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "166", "Map Unit Key": "2391373", "Component": "Humic Haploxerands", "Component Percentage": 40, "Eco Class ID": "F022BI110CA", "Ecosite Class Name": "Frigid Humic Loamy Gentle Slopes" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "167", "Map Unit Key": "2391372", "Component": "Emeraldlake", "Component Percentage": 35, "Eco Class ID": "R022BI207CA", "Ecosite Class Name": "Alpine Slopes" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "167", "Map Unit Key": "2391372", "Component": "Readingpeak", "Component Percentage": 20, "Eco Class ID": "F022BI124CA", "Ecosite Class Name": "Upper Cryic Slopes" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "167", "Map Unit Key": "2391372", "Component": "Rock outCrop", "Component Percentage": 15, "Eco Class ID": null, "Ecosite Class Name": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "167", "Map Unit Key": "2391372", "Component": "Terracelake", "Component Percentage": 15, "Eco Class ID": "R022BI207CA", "Ecosite Class Name": "Alpine Slopes" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "168", "Map Unit Key": "2422478", "Component": "Vitrixerands", "Component Percentage": 90, "Eco Class ID": "F022BI123CA", "Ecosite Class Name": "Frigid Flat Outwash Terraces" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "169", "Map Unit Key": "2422479", "Component": "Rock outCrop", "Component Percentage": 20, "Eco Class ID": null, "Ecosite Class Name": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "169", "Map Unit Key": "2422479", "Component": "Scoured", "Component Percentage": 15, "Eco Class ID": "F022BI121CA", "Ecosite Class Name": "Frigid Shallow Or Moderately Deep Medial-Skeletal Slopes" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "169", "Map Unit Key": "2422479", "Component": "Sueredo", "Component Percentage": 55, "Eco Class ID": "F022BI103CA", "Ecosite Class Name": "Frigid Tephra Over Slopes And Flats" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "170", "Map Unit Key": "2422480", "Component": "Emeraldlake", "Component Percentage": 20, "Eco Class ID": "R022BI207CA", "Ecosite Class Name": "Alpine Slopes" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "170", "Map Unit Key": "2422480", "Component": "Readingpeak", "Component Percentage": 15, "Eco Class ID": "R022BI207CA", "Ecosite Class Name": "Alpine Slopes" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "170", "Map Unit Key": "2422480", "Component": "Rock outCrop", "Component Percentage": 35, "Eco Class ID": null, "Ecosite Class Name": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "170", "Map Unit Key": "2422480", "Component": "Rubble land", "Component Percentage": 18, "Eco Class ID": null, "Ecosite Class Name": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "171", "Map Unit Key": "2422481", "Component": "Aquepts", "Component Percentage": 50, "Eco Class ID": "R022BI211CA", "Ecosite Class Name": "Spring Complex" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "171", "Map Unit Key": "2422481", "Component": "Typic Petraquepts", "Component Percentage": 35, "Eco Class ID": "R022BI211CA", "Ecosite Class Name": "Spring Complex" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "172", "Map Unit Key": "2422482", "Component": "Badgerflat", "Component Percentage": 90, "Eco Class ID": "F022BI126CA", "Ecosite Class Name": "Cold Frigid Tephra Over Moraine Slopes" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "173", "Map Unit Key": "2422483", "Component": "Badgerwash", "Component Percentage": 90, "Eco Class ID": "F022BI125CA", "Ecosite Class Name": "Cold Frigid Tephra Over Outwash Plains Or Lake Terraces" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "174",
+        "Map Unit Key": "2422484", "Component": "Readingpeak", "Component Percentage": 20, "Eco Class ID": "F022BI124CA", "Ecosite Class Name": "Upper Cryic Slopes" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "174", "Map Unit Key": "2422484", "Component": "Rock outCrop", "Component Percentage": 10, "Eco Class ID": null, "Ecosite Class Name": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "174", "Map Unit Key": "2422484", "Component": "Vitrandic Cryorthents", "Component Percentage": 60, "Eco Class ID": "R022BI214CA", "Ecosite Class Name": "Pyroclastic Flow" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "175", "Map Unit Key": "2422485", "Component": "Shadowlake", "Component Percentage": 75, "Eco Class ID": "F022BI111CA", "Ecosite Class Name": "Cryic Gravelly Or Ashy Sandy Loam Gentle Slopes" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "175", "Map Unit Key": "2422485", "Component": "Vitrandic Cryofluvents", "Component Percentage": 15, "Eco Class ID": "R022BI206CA", "Ecosite Class Name": "Cryic Lacustrine Flat" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "176", "Map Unit Key": "2422486", "Component": "Juniperlake", "Component Percentage": 85, "Eco Class ID": "F022BI110CA", "Ecosite Class Name": "Frigid Humic Loamy Gentle Slopes" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "177", "Map Unit Key": "2427863", "Component": "Vitrandic Cryorthents", "Component Percentage": 85, "Eco Class ID": "R022BI207CA", "Ecosite Class Name": "Alpine Slopes" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "200", "Map Unit Key": "1883777", "Component": "Cinder land", "Component Percentage": 100, "Eco Class ID": null, "Ecosite Class Name": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "201", "Map Unit Key": "1883778", "Component": "Lava flows", "Component Percentage": 100, "Eco Class ID": null, "Ecosite Class Name": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "202", "Map Unit Key": "1883780", "Component": "Typic Xerorthents", "Component Percentage": 85, "Eco Class ID": "R022BI201CA", "Ecosite Class Name": "Bedded Tephra Deposits" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "202", "Map Unit Key": "1883780", "Component": "Typic Xerorthents", "Component Percentage": 10, "Eco Class ID": "R022BI201CA", "Ecosite Class Name": "Bedded Tephra Deposits" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "203", "Map Unit Key": "1883781", "Component": "Typic Xerorthents", "Component Percentage": 90, "Eco Class ID": "F022BI100CA", "Ecosite Class Name": "Low Precip Frigid Sandy Tephra Gentle Slopes" }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "205", "Map Unit Key": "1883783", "Component": "Beaches", "Component Percentage": 100, "Eco Class ID": null, "Ecosite Class Name": null }, { "Area Symbol": "CA789", "Area Name": "Lassen Volcanic National Park, California", "Map Unit Symbol": "W", "Map Unit Key": "2426465", "Component": "Water", "Component Percentage": 100, "Eco Class ID": null, "Ecosite Class Name": null }
+];
+
+
+/***/ }),
+
+/***/ "./src/app/services/adventure-time.service.ts":
+/*!****************************************************!*\
+  !*** ./src/app/services/adventure-time.service.ts ***!
+  \****************************************************/
+/*! exports provided: AdventureTimeService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdventureTimeService", function() { return AdventureTimeService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _mockdata__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../mockdata */ "./src/app/mockdata.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var AdventureTimeService = /** @class */ (function () {
+    function AdventureTimeService() {
+    }
+    AdventureTimeService.prototype.getCharacters = function () {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(_mockdata__WEBPACK_IMPORTED_MODULE_2__["CHARACTERS"]);
+    };
+    AdventureTimeService.prototype.getCharacters1 = function () {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(_mockdata__WEBPACK_IMPORTED_MODULE_2__["CHARACTERS1"]);
+    };
+    AdventureTimeService.prototype.getCharacters2 = function () {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(_mockdata__WEBPACK_IMPORTED_MODULE_2__["CHARACTERS2"]);
+    };
+    AdventureTimeService.prototype.getColumns = function () {
+        return ["Area Symbol", "Map Unit Key", "Map Unit Symbol", "Area Name"
+        ];
+    };
+    ;
+    AdventureTimeService.prototype.getColumns1 = function () {
+        return ["Map Unit Key", "Component Unit Key", "Component Percentage", "Soil Series Name", "Description", "Soil Order", "Soil Sub Order", "Taxonomy Great Group", "Taxonomy Sub Group"
+        ];
+    };
+    ;
+    AdventureTimeService.prototype.getColumns2 = function () {
+        return ["Area Symbol", "Area Name", "Map Unit Symbol", "Map Unit Key", "Component", "Component Percentage", "Eco Class ID", "Ecosite Class Name"
+        ];
+    };
+    ;
+    AdventureTimeService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        __metadata("design:paramtypes", [])
+    ], AdventureTimeService);
+    return AdventureTimeService;
 }());
 
 
@@ -1296,7 +1671,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/nathanwlarsen/soilexplorer/angular-src/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/jacobwilks/soilexplorer/angular-src/src/main.ts */"./src/main.ts");
 
 
 /***/ }),
