@@ -1,14 +1,16 @@
-<table mdbTable small="true">
-<table>
+<table mdbTable class="z-depth-1" striped="true" hover="true" >
+  <thead>
   <tr>
     <th *ngFor="let col of columns" scope="col">
       {{col}}
     </th>
   </tr>
+  </thead>
+  <tbody>
   <tr *ngFor="let char of characters | async" scope="row">
     <td *ngFor="let col of columns" scope="row">
       {{char[col]}}
     </td>
   </tr>
-</table>
+</tbody>
 </table>
