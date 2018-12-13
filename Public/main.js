@@ -1134,7 +1134,7 @@ var TableRowComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table mdbTable class=\"table table-responsive table-striped table-dark w-auto\" hover=\"true\" >\n  <thead>\n  <tr>\n    <th *ngFor=\"let col of columns\" scope=\"col\">\n      {{col}}\n    </th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let char of characters | async\" scope=\"row\">\n    <td *ngFor=\"let col of columns\" scope=\"row\">\n      {{char[col]}}\n    </td>\n  </tr>\n</tbody>\n</table>"
+module.exports = "<table mdbTable class=\"table table-responsive table-striped table-dark\" hover=\"true\" >\n  <thead>\n  <tr>\n    <th *ngFor=\"let col of columns\" scope=\"col\">\n      {{col}}\n    </th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let char of characters | async\" scope=\"row\">\n    <td *ngFor=\"let col of columns\" scope=\"row\">\n      {{char[col]}}\n    </td>\n  </tr>\n</tbody>\n</table>"
 
 /***/ }),
 
@@ -1204,7 +1204,7 @@ var TableComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table mdbTable class=\"table table-responsive table-striped table-dark w-auto\" hover=\"true\" >\n    <thead>\n    <tr>\n      <th *ngFor=\"let col of columns\" scope=\"col\">\n        {{col}}\n      </th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr *ngFor=\"let char of characters | async\" scope=\"row\">\n      <td *ngFor=\"let col of columns\" scope=\"row\">\n        {{char[col]}}\n      </td>\n    </tr>\n  </tbody>\n  </table>"
+module.exports = "<table mdbTable class=\"table table-responsive table-striped table-dark\" hover=\"true\" >\n    <thead>\n    <tr>\n      <th *ngFor=\"let col of columns\" scope=\"col\">\n        {{col}}\n      </th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr *ngFor=\"let char of characters | async\" scope=\"row\">\n      <td *ngFor=\"let col of columns\" scope=\"row\">\n        {{char[col]}}\n      </td>\n    </tr>\n  </tbody>\n  </table>"
 
 /***/ }),
 
@@ -1274,7 +1274,7 @@ var Table1Component = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table mdbTable class=\"table table-responsive table-striped table-dark w-auto\" hover=\"true\" >\n    <thead>\n    <tr>\n      <th *ngFor=\"let col of columns\" scope=\"col\">\n        {{col}}\n      </th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr *ngFor=\"let char of characters | async\" scope=\"row\">\n      <td *ngFor=\"let col of columns\" scope=\"row\" >\n        {{char[col]}}\n      </td>\n    </tr>\n  </tbody>\n  </table>"
+module.exports = "<table mdbTable class=\"table table-responsive table-striped table-dark\" hover=\"true\" >\n    <thead>\n    <tr>\n      <th *ngFor=\"let col of columns\" scope=\"col\">\n        {{col}}\n      </th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr *ngFor=\"let char of characters | async\" scope=\"row\">\n      <td *ngFor=\"let col of columns\" scope=\"row\" >\n        {{char[col]}}\n      </td>\n    </tr>\n  </tbody>\n  </table>"
 
 /***/ }),
 
