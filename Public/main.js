@@ -860,7 +860,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--<div *ngIf=\"user\">\n  <h2 class=\"page-header\">{{user.name}}</h2>\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">Username: {{user.username}}</li>\n    <li class=\"list-group-item\">Email: {{user.email}}</li>\n  </ul>\n</div>\n-->\n<div id=\"qList\"></div>\n<a href=\"http://localhost:8080/profile#q1\">Query One</a><br>\n<a href=\"http://localhost:8080/profile#q2\">Query Two</a><br>\n<a href=\"http://localhost:8080/profile#q3\">Query Three</a><br>\n<div class=\"app-component\" id=\"q1\">\n    <h1 class=\"text-center\">Lassen National Park Map Unit information</h1>\n    <app-table></app-table>\n</div>\n\n<a href=\"http://localhost:8080/profile#qList\">Top</a>\n\n<div class=\"app-component\" id=\"q2\">\n    <h1 class=\"text-center\">Soil Taxonomy in Lassen National Park</h1>\n    <app-table1></app-table1>\n</div>\n<a href=\"http://localhost:8080/profile#qList\">Top</a>\n<div class=\"app-component\" id=\"q3\">\n    <h1 class=\"text-center\">Ecological Site by Area Symbol</h1>\n    <app-table2></app-table2>\n</div>\n<a href=\"http://localhost:8080/profile#qList\">Top</a>"
+module.exports = "<!--<div *ngIf=\"user\">\n  <h2 class=\"page-header\">{{user.name}}</h2>\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">Username: {{user.username}}</li>\n    <li class=\"list-group-item\">Email: {{user.email}}</li>\n  </ul>\n</div>\n-->\n<div id=\"qList\"></div>\n<a class=\"nav-link\" href=\"/profile#q1\">Query One</a>\n<a class=\"nav-link\" href=\"/profile#q2\">Query Two</a>\n<a class=\"nav-link\" href=\"/profile#q3\">Query Three</a>\n<div class=\"app-component\" id=\"q1\">\n    <h1 class=\"text-center\">Lassen National Park Map Unit information</h1>\n    <app-table></app-table>\n</div>\n\n<a class=\"nav-link\" href=\"/profile#qList\">Back to top of page</a>\n\n<div class=\"app-component\" id=\"q2\">\n    <h1 class=\"text-center\">Soil Taxonomy in Lassen National Park</h1>\n    <app-table1></app-table1>\n</div>\n<a class=\"nav-link\" href=\"/profile#qList\">Back to top of page</a>\n<div class=\"app-component\" id=\"q3\">\n    <h1 class=\"text-center\">Ecological Site by Area Symbol</h1>\n    <app-table2></app-table2>\n</div>\n<a class=\"nav-link\" href=\"/profile#qList\">Back to top of page</a>"
 
 /***/ }),
 
@@ -1134,7 +1134,7 @@ var TableRowComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table mdbTable class=\"table table-striped table-dark\" hover=\"true\" >\n  <thead>\n  <tr>\n    <th *ngFor=\"let col of columns\" scope=\"col\">\n      {{col}}\n    </th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let char of characters | async\" scope=\"row\">\n    <td *ngFor=\"let col of columns\" scope=\"row\">\n      {{char[col]}}\n    </td>\n  </tr>\n</tbody>\n</table>"
+module.exports = "<table mdbTable class=\"table table-responsive table-striped table-dark w-auto\" hover=\"true\" >\n  <thead>\n  <tr>\n    <th *ngFor=\"let col of columns\" scope=\"col\">\n      {{col}}\n    </th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let char of characters | async\" scope=\"row\">\n    <td *ngFor=\"let col of columns\" scope=\"row\">\n      {{char[col]}}\n    </td>\n  </tr>\n</tbody>\n</table>"
 
 /***/ }),
 
@@ -1204,7 +1204,7 @@ var TableComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table mdbTable class=\"table table-striped table-dark\" hover=\"true\" >\n    <thead>\n    <tr>\n      <th *ngFor=\"let col of columns\" scope=\"col\">\n        {{col}}\n      </th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr *ngFor=\"let char of characters | async\" scope=\"row\">\n      <td *ngFor=\"let col of columns\" scope=\"row\">\n        {{char[col]}}\n      </td>\n    </tr>\n  </tbody>\n  </table>"
+module.exports = "<table mdbTable class=\"table table-responsive table-striped table-dark w-auto\" hover=\"true\" >\n    <thead>\n    <tr>\n      <th *ngFor=\"let col of columns\" scope=\"col\">\n        {{col}}\n      </th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr *ngFor=\"let char of characters | async\" scope=\"row\">\n      <td *ngFor=\"let col of columns\" scope=\"row\">\n        {{char[col]}}\n      </td>\n    </tr>\n  </tbody>\n  </table>"
 
 /***/ }),
 
@@ -1274,7 +1274,7 @@ var Table1Component = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table mdbTable class=\"table table-striped table-dark\" hover=\"true\" >\n    <thead>\n    <tr>\n      <th *ngFor=\"let col of columns\" scope=\"col\">\n        {{col}}\n      </th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr *ngFor=\"let char of characters | async\" scope=\"row\">\n      <td *ngFor=\"let col of columns\" scope=\"row\" >\n        {{char[col]}}\n      </td>\n    </tr>\n  </tbody>\n  </table>"
+module.exports = "<table mdbTable class=\"table table-responsive table-striped table-dark w-auto\" hover=\"true\" >\n    <thead>\n    <tr>\n      <th *ngFor=\"let col of columns\" scope=\"col\">\n        {{col}}\n      </th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr *ngFor=\"let char of characters | async\" scope=\"row\">\n      <td *ngFor=\"let col of columns\" scope=\"row\" >\n        {{char[col]}}\n      </td>\n    </tr>\n  </tbody>\n  </table>"
 
 /***/ }),
 
