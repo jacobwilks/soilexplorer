@@ -600,7 +600,11 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 module.exports = "<div class=\"jumbotron text-center\">\n  <h1>Soil Explorer App</h1>\n  <p class=\"lead\">Welcome to our Soil Explorer Application!</p>\n  <div>\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a><a class=\"btn btn-primary\" [routerLink]=\"['/login']\">Login</a>\n  </div>\n</div>"
+=======
+module.exports = "\n    <!-- Grid row -->\n    <div class=\"row\">\n  \n        <!-- Grid column -->\n        <div class=\"col-md-6 mb-3\">\n      \n          <img src=\"../../assets/789207_4.jpg\" class=\"img-fluid z-depth-1\"\n            alt=\"Responsive image\">\n      \n        </div>\n        <!-- Grid column -->\n      \n        <!-- Grid column -->\n        <div class=\"col-md-6 mb-3\">\n      \n          <img src=\"../../assets/LAVO_IFR_field_crew_edited.jpg\" class=\"img-fluid z-depth-1\"\n            alt=\"Responsive image\">\n      \n        </div>\n        <!-- Grid column -->\n      \n      </div>\n      <!-- Grid row -->\n  \n  <!-- Grid row -->\n  <div class=\"row\">\n  \n    <!-- Grid column -->\n    <div class=\"col-lg-4 col-md-12 mb-3\">\n  \n      <img src=\"../../assets/789212_1.jpg\" class=\"img-fluid z-depth-1\"\n        alt=\"Responsive image\">\n  \n    </div>\n    <!-- Grid column -->\n  \n    <!-- Grid column -->\n    <div class=\"col-lg-4 col-md-6 mb-3\">\n  \n      <img src=\"../../assets/789212_3.jpg\" class=\"img-fluid z-depth-1\"\n        alt=\"Responsive image\">\n  \n    </div>\n    <!-- Grid column -->\n  \n    <!-- Grid column -->\n    <div class=\"col-lg-4 col-md-6 mb-3\">\n  \n      <img src=\"../../assets/IMG_0392.jpg\" class=\"img-fluid z-depth-1\"\n        alt=\"Responsive image\">\n  \n    </div>\n    <!-- Grid column -->\n  \n  </div>\n  <!-- Grid row -->\n  \n  <!-- Grid row -->\n  <div class=\"row\">\n  \n    <!-- Grid column -->\n    <div class=\"col-md-6 mb-3\">\n  \n      <img src=\"../../assets/IMG_0409.jpg\" class=\"img-fluid z-depth-1\"\n        alt=\"Responsive image\">\n  \n    </div>\n    <!-- Grid column -->\n  \n    <!-- Grid column -->\n    <div class=\"col-md-6 mb-3\">\n  \n      <img src=\"../../assets/IMG_2914.jpg\" class=\"img-fluid z-depth-1\"\n        alt=\"Responsive image\">\n  \n    </div>\n    <!-- Grid column -->\n  \n  </div>\n  <!-- Grid row -->"
+>>>>>>> f2a80845453d8b5e9228d34cac1585b261dfb951
 
 /***/ }),
 
@@ -774,7 +778,11 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 module.exports = "<!--Navbar-->\n<nav class =\"navbar navbar-expand-lg navbar-dark unique-color\">\n\n    <!-- Navbar brand -->\n    <mdb-navbar-brand><a class=\"navbar-brand\" [routerLink] = \"['/']\">Soil Explorer</a></mdb-navbar-brand>\n\n    <!-- Collapsible content -->\n    <links>\n        <!-- Links -->\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/']\">Home</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/profile']\">Queries</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/dashboard']\">Dashboard</a></li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/login']\">Login</a></li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/techdetails']\">Technical Details</a></li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/register']\">Register</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\"><a class=\"nav-link waves-light\" mdbWavesEffect (click)=\"onLogoutClick()\" href=\"#\">Logout</a></li>\n        </ul>\n        <!-- Links -->\n    </links>\n    <!-- Collapsible content -->\n\n</nav>\n<!--/.Navbar-->\n"
+=======
+module.exports = "<!--Navbar-->\n<nav class =\"navbar sticky-top navbar-expand-lg navbar-dark unique-color\">\n\n    <!-- Navbar brand -->\n    <mdb-navbar-brand><a class=\"navbar-brand\" [routerLink] = \"['/']\">Soil Explorer</a></mdb-navbar-brand>\n\n    <!-- Collapsible content -->\n    <links>\n        <!-- Links -->\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/']\">Home</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/profile']\">Queries</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/dashboard']\">Dashboard</a></li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/login']\">Login</a></li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/register']\">Register</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\"><a class=\"nav-link waves-light\" mdbWavesEffect (click)=\"onLogoutClick()\" href=\"#\">Logout</a></li>\n        </ul>\n        <!-- Links -->\n    </links>\n    <!-- Collapsible content -->\n\n</nav>\n<!--/.Navbar-->\n"
+>>>>>>> f2a80845453d8b5e9228d34cac1585b261dfb951
 
 /***/ }),
 
@@ -864,7 +872,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--<div *ngIf=\"user\">\n  <h2 class=\"page-header\">{{user.name}}</h2>\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">Username: {{user.username}}</li>\n    <li class=\"list-group-item\">Email: {{user.email}}</li>\n  </ul>\n</div>\n-->\n<div id=\"qList\"></div>\n<a href=\"http://localhost:8080/profile#q1\">Query One</a><br>\n<a href=\"http://localhost:8080/profile#q2\">Query Two</a><br>\n<a href=\"http://localhost:8080/profile#q3\">Query Three</a><br>\n<div class=\"app-component\" id=\"q1\">\n    <h1 class=\"text-center\">Lassen National Park Map Unit information</h1>\n    <app-table></app-table>\n</div>\n\n<a href=\"http://localhost:8080/profile#qList\">Top</a>\n\n<div class=\"app-component\" id=\"q2\">\n    <h1 class=\"text-center\">Soil Taxonomy in Lassen National Park</h1>\n    <app-table1></app-table1>\n</div>\n<a href=\"http://localhost:8080/profile#qList\">Top</a>\n<div class=\"app-component\" id=\"q3\">\n    <h1 class=\"text-center\">Ecological Site by Area Symbol</h1>\n    <app-table2></app-table2>\n</div>\n<a href=\"http://localhost:8080/profile#qList\">Top</a>"
+module.exports = "<!--<div *ngIf=\"user\">\n  <h2 class=\"page-header\">{{user.name}}</h2>\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">Username: {{user.username}}</li>\n    <li class=\"list-group-item\">Email: {{user.email}}</li>\n  </ul>\n</div>\n-->\n<div id=\"qList\"></div>\n<a class=\"nav-link\" href=\"/profile#q1\">Query One</a>\n<a class=\"nav-link\" href=\"/profile#q2\">Query Two</a>\n<a class=\"nav-link\" href=\"/profile#q3\">Query Three</a>\n<div class=\"app-component\" id=\"q1\">\n    <h1 class=\"text-center\">Lassen National Park Map Unit information</h1>\n    <app-table></app-table>\n</div>\n\n<a class=\"nav-link\" href=\"/profile#qList\">Back to top of page</a>\n\n<div class=\"app-component\" id=\"q2\">\n    <h1 class=\"text-center\">Soil Taxonomy in Lassen National Park</h1>\n    <app-table1></app-table1>\n</div>\n<a class=\"nav-link\" href=\"/profile#qList\">Back to top of page</a>\n<div class=\"app-component\" id=\"q3\">\n    <h1 class=\"text-center\">Ecological Site by Area Symbol</h1>\n    <app-table2></app-table2>\n</div>\n<a class=\"nav-link\" href=\"/profile#qList\">Back to top of page</a>"
 
 /***/ }),
 
@@ -1138,7 +1146,7 @@ var TableRowComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table mdbTable class=\"table table-striped table-dark\" hover=\"true\" >\n  <thead>\n  <tr>\n    <th *ngFor=\"let col of columns\" scope=\"col\">\n      {{col}}\n    </th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let char of characters | async\" scope=\"row\">\n    <td *ngFor=\"let col of columns\" scope=\"row\">\n      {{char[col]}}\n    </td>\n  </tr>\n</tbody>\n</table>"
+module.exports = "<table mdbTable class=\"table table-responsive table-striped table-dark\" hover=\"true\" >\n  <thead>\n  <tr>\n    <th *ngFor=\"let col of columns\" scope=\"col\">\n      {{col}}\n    </th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let char of characters | async\" scope=\"row\">\n    <td *ngFor=\"let col of columns\" scope=\"row\">\n      {{char[col]}}\n    </td>\n  </tr>\n</tbody>\n</table>"
 
 /***/ }),
 
@@ -1208,7 +1216,7 @@ var TableComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table mdbTable class=\"table table-striped table-dark\" hover=\"true\" >\n    <thead>\n    <tr>\n      <th *ngFor=\"let col of columns\" scope=\"col\">\n        {{col}}\n      </th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr *ngFor=\"let char of characters | async\" scope=\"row\">\n      <td *ngFor=\"let col of columns\" scope=\"row\">\n        {{char[col]}}\n      </td>\n    </tr>\n  </tbody>\n  </table>"
+module.exports = "<table mdbTable class=\"table table-responsive table-striped table-dark\" hover=\"true\" >\n    <thead>\n    <tr>\n      <th *ngFor=\"let col of columns\" scope=\"col\">\n        {{col}}\n      </th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr *ngFor=\"let char of characters | async\" scope=\"row\">\n      <td *ngFor=\"let col of columns\" scope=\"row\">\n        {{char[col]}}\n      </td>\n    </tr>\n  </tbody>\n  </table>"
 
 /***/ }),
 
@@ -1278,7 +1286,7 @@ var Table1Component = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table mdbTable class=\"table table-striped table-dark\" hover=\"true\" >\n    <thead>\n    <tr>\n      <th *ngFor=\"let col of columns\" scope=\"col\">\n        {{col}}\n      </th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr *ngFor=\"let char of characters | async\" scope=\"row\">\n      <td *ngFor=\"let col of columns\" scope=\"row\" >\n        {{char[col]}}\n      </td>\n    </tr>\n  </tbody>\n  </table>"
+module.exports = "<table mdbTable class=\"table table-responsive table-striped table-dark\" hover=\"true\" >\n    <thead>\n    <tr>\n      <th *ngFor=\"let col of columns\" scope=\"col\">\n        {{col}}\n      </th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr *ngFor=\"let char of characters | async\" scope=\"row\">\n      <td *ngFor=\"let col of columns\" scope=\"row\" >\n        {{char[col]}}\n      </td>\n    </tr>\n  </tbody>\n  </table>"
 
 /***/ }),
 
@@ -1578,13 +1586,13 @@ var AuthService = /** @class */ (function () {
     AuthService.prototype.registerUser = function (user) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:8080/users/register', user, { headers: headers })
+        return this.http.post('/users/register', user, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.authenticateUser = function (user) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:8080/users/authenticate', user, { headers: headers })
+        return this.http.post('/users/authenticate', user, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.getProfile = function () {
@@ -1592,7 +1600,7 @@ var AuthService = /** @class */ (function () {
         this.loadToken();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://localhost:8080/users/profile', { headers: headers })
+        return this.http.get('/users/profile', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     // Fetches token from local storage
@@ -1738,7 +1746,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/jacobwilks/soilexplorer/angular-src/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/nathanwlarsen/soilexplorer/angular-src/src/main.ts */"./src/main.ts");
 
 
 /***/ }),
