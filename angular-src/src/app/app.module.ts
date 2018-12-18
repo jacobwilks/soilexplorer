@@ -24,6 +24,7 @@ import { TableComponent } from './components/table/table.component';
 import { TableRowComponent } from './components/table-row/table-row.component';
 import { Table1Component } from './components/table1/table1.component';
 import { Table2Component } from './components/table2/table2.component';
+import { TechdetailsComponent } from './components/techdetails/techdetails.component';
 
 export function tokenGetter() {
   return localStorage.getItem('access_token');
@@ -33,6 +34,7 @@ const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'techdetails', component: TechdetailsComponent},
   {path: 'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
   {path: 'profile', component: ProfileComponent, canActivate:[AuthGuard]}
 ]
@@ -49,7 +51,8 @@ const appRoutes: Routes = [
     TableComponent,
     TableRowComponent,
     Table1Component,
-    Table2Component
+    Table2Component,
+    TechdetailsComponent
   ],
   imports: [
     PdfViewerModule,

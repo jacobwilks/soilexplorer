@@ -397,12 +397,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_table_row_table_row_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/table-row/table-row.component */ "./src/app/components/table-row/table-row.component.ts");
 /* harmony import */ var _components_table1_table1_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/table1/table1.component */ "./src/app/components/table1/table1.component.ts");
 /* harmony import */ var _components_table2_table2_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/table2/table2.component */ "./src/app/components/table2/table2.component.ts");
+/* harmony import */ var _components_techdetails_techdetails_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/techdetails/techdetails.component */ "./src/app/components/techdetails/techdetails.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -436,6 +438,7 @@ var appRoutes = [
     { path: '', component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"] },
     { path: 'register', component: _components_register_register_component__WEBPACK_IMPORTED_MODULE_7__["RegisterComponent"] },
     { path: 'login', component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_6__["LoginComponent"] },
+    { path: 'techdetails', component: _components_techdetails_techdetails_component__WEBPACK_IMPORTED_MODULE_25__["TechdetailsComponent"] },
     { path: 'dashboard', component: _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_9__["DashboardComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_19__["AuthGuard"]] },
     { path: 'profile', component: _components_profile_profile_component__WEBPACK_IMPORTED_MODULE_10__["ProfileComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_19__["AuthGuard"]] }
 ];
@@ -455,7 +458,8 @@ var AppModule = /** @class */ (function () {
                 _components_table_table_component__WEBPACK_IMPORTED_MODULE_21__["TableComponent"],
                 _components_table_row_table_row_component__WEBPACK_IMPORTED_MODULE_22__["TableRowComponent"],
                 _components_table1_table1_component__WEBPACK_IMPORTED_MODULE_23__["Table1Component"],
-                _components_table2_table2_component__WEBPACK_IMPORTED_MODULE_24__["Table2Component"]
+                _components_table2_table2_component__WEBPACK_IMPORTED_MODULE_24__["Table2Component"],
+                _components_techdetails_techdetails_component__WEBPACK_IMPORTED_MODULE_25__["TechdetailsComponent"]
             ],
             imports: [
                 ng2_pdf_viewer__WEBPACK_IMPORTED_MODULE_20__["PdfViewerModule"],
@@ -596,7 +600,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\n  <h1>Soil Explorer App</h1>\n  <p class=\"lead\">Welcome to our Soil Explorer Application!</p>\n  <div>\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a><a class=\"btn btn-primary\" [routerLink]=\"['/login']\">Login</a>\n  </div>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-md-4\">\n    <h3>Express Backend</h3>\n    <p>A rock solid Node.js/Express server using Mongoose to organize models and query the database</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>Angular-CLI</h3>\n    <p>Angular-CLI to generate components, services and more. Local dev server and easy compilation</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>JWT Tokens</h3>\n    <p>Full featured authentication using JSON web tokens. Login and store user data</p>\n  </div>\n</div>"
+module.exports = "<div class=\"jumbotron text-center\">\n  <h1>Soil Explorer App</h1>\n  <p class=\"lead\">Welcome to our Soil Explorer Application!</p>\n  <div>\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a><a class=\"btn btn-primary\" [routerLink]=\"['/login']\">Login</a>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -770,7 +774,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--Navbar-->\n<nav class =\"navbar navbar-expand-lg navbar-dark unique-color\">\n\n    <!-- Navbar brand -->\n    <mdb-navbar-brand><a class=\"navbar-brand\" [routerLink] = \"['/']\">Soil Explorer</a></mdb-navbar-brand>\n\n    <!-- Collapsible content -->\n    <links>\n        <!-- Links -->\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/']\">Home</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/profile']\">Queries</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/dashboard']\">Dashboard</a></li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/login']\">Login</a></li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/register']\">Register</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\"><a class=\"nav-link waves-light\" mdbWavesEffect (click)=\"onLogoutClick()\" href=\"#\">Logout</a></li>\n        </ul>\n        <!-- Links -->\n    </links>\n    <!-- Collapsible content -->\n\n</nav>\n<!--/.Navbar-->\n"
+module.exports = "<!--Navbar-->\n<nav class =\"navbar navbar-expand-lg navbar-dark unique-color\">\n\n    <!-- Navbar brand -->\n    <mdb-navbar-brand><a class=\"navbar-brand\" [routerLink] = \"['/']\">Soil Explorer</a></mdb-navbar-brand>\n\n    <!-- Collapsible content -->\n    <links>\n        <!-- Links -->\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/']\">Home</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/profile']\">Queries</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/dashboard']\">Dashboard</a></li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/login']\">Login</a></li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/techdetails']\">Technical Details</a></li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive] = \"['active']\" [routerLinkActiveOptions] = \"{exact:true}\" ><a class=\"nav-link waves-light\" mdbWavesEffect [routerLink] = \"['/register']\">Register</a></li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\"><a class=\"nav-link waves-light\" mdbWavesEffect (click)=\"onLogoutClick()\" href=\"#\">Logout</a></li>\n        </ul>\n        <!-- Links -->\n    </links>\n    <!-- Collapsible content -->\n\n</nav>\n<!--/.Navbar-->\n"
 
 /***/ }),
 
@@ -1331,6 +1335,69 @@ var Table2Component = /** @class */ (function () {
         __metadata("design:paramtypes", [_services_adventure_time_service__WEBPACK_IMPORTED_MODULE_1__["AdventureTimeService"]])
     ], Table2Component);
     return Table2Component;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/techdetails/techdetails.component.html":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/techdetails/techdetails.component.html ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n    <div class=\"col-md-4\">\n      <h3>Express Backend</h3>\n      <p>A rock solid Node.js/Express server using Mongoose to organize models and query the database</p>\n    </div>\n    \n    <div class=\"col-md-4\">\n      <h3>Angular-CLI</h3>\n      <p>Angular-CLI to generate components, services and more. Local dev server and easy compilation</p>\n    </div>\n    \n    <div class=\"col-md-4\">\n      <h3>JWT Tokens</h3>\n      <p>Full featured authentication using JSON web tokens. Login and store user data</p>\n    </div>\n\n    <div class=\"col-md-4\">\n        <h3>PostgreSQL</h3>\n        <p>Object-relational database management system with an emphasis on extensibility and standards compliance. PostgreSQL is ACID-compliant and transactional. PostgreSQL has updatable views and materialized views, triggers, foreign keys; supports functions and stored procedures, and other expandability.</p>\n    </div>\n\n    <div class=\"col-md-4\">\n            <h3>MongoDB</h3>\n            <p>MongoDB is a cross-platform document-oriented database program. It is used for our user registration and authentication in order to keep the soil information and user information seperate.</p>\n    </div>\n\n    <div class=\"col-md-4\">\n        <h3>BCryptJS</h3>\n        <p>Bcrypt is a password hashing function based on the Blowfish cipher. Incorporates a salt in order to prevent rainbow table attacks and provide more security.</p>\n    </div>\n\n    <div class=\"col-md-4\">\n        <h3>Material Design for Bootstrap</h3>\n        <p>Material Design for Bootstrap (MDB) is a powerful Material Design UI KIT for most popular HTML, CSS, and JS framework.</p>\n    </div> \n\n\n  </div>\n\n"
+
+/***/ }),
+
+/***/ "./src/app/components/techdetails/techdetails.component.scss":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/techdetails/techdetails.component.scss ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/techdetails/techdetails.component.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/components/techdetails/techdetails.component.ts ***!
+  \*****************************************************************/
+/*! exports provided: TechdetailsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TechdetailsComponent", function() { return TechdetailsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var TechdetailsComponent = /** @class */ (function () {
+    function TechdetailsComponent() {
+    }
+    TechdetailsComponent.prototype.ngOnInit = function () {
+    };
+    TechdetailsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-techdetails',
+            template: __webpack_require__(/*! ./techdetails.component.html */ "./src/app/components/techdetails/techdetails.component.html"),
+            styles: [__webpack_require__(/*! ./techdetails.component.scss */ "./src/app/components/techdetails/techdetails.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], TechdetailsComponent);
+    return TechdetailsComponent;
 }());
 
 
